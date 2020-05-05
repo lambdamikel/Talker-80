@@ -2,7 +2,7 @@
 
 ## A Modern Voice Synthesizer for the TRS-80 Model 1. 
 
-![TRS-80 Model 1 with Talker/80](images/dsc09771.jpg)
+![TRS-80 Model 1 with Talker/80](images/DC09771.JPG)
 
 
 ## News 
