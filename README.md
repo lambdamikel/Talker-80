@@ -64,8 +64,8 @@ Talker/80 gets its power from a standard, voltage stabilized **5V power supply**
 
 It is very important that your equipment is powered on in the right order of sequence: 
 
- 1. Make sure everything is turned off 
- 2. Make sure everything is connected correctly (Talker/80 to the Model 1, Expansion Interface to Talker/80 is present)
+ 1. Make sure everything is powered off. 
+ 2. Make sure everything is connected correctly (Talker/80 to the Model 1, Expansion Interface to Talker/80 if present - note that it does not require the Expansion Interface).
  3. Supply power to Talker/80 by plugging in the PSU. You should hear "Talker/80 initialized" and an announcement of the current mode, which depends on the settings of the DIP switches. 
  4. Power on your Floppy Drives, Printer, etc. 
  5. Power on the Expansion Interface. 
