@@ -36,17 +36,17 @@ a connection cable. Send me a mail if you are interrested.
 
 Talker/80 offers: 
 
-  1. **DECtalk-Based Text-to-Speech (TTS) Synthesis:** the **Epson S1V30120 TTS** chip on the utilized mikroBUS "TextToSpeech Click!" daughterboard from MikroElektronika implements DECtalk v5 -- a natural sounding speech synthesizer for English and Spanish, with different voices. DECtalk can even sing. The DECtalk mode is very powerful and versatile, but the DECtalk control language can be difficult to program. Hence, a simplified control language for the S1V30120 is offered as well, the so-called Epson mode. The DECtalk mode is used to implement **emulations of two classic TRS-80 Model 1 Voice Synthesizers**: the official TRS Voice Synthesizer from Tandy Radio Shack, and the VS100 Voice Synthesizer from Alpha Works. Both use the **Votrax SC-01** speech chip, which is emulated by means of DECtalk here. The DECtalk and Epson modes produce superior speech quality, and text-to-speech is performed by Talker/80 itself, i.e., no breaking down into phonemes is required. You can just send the text to be spoken durectly to IO port 11. And the status of the speech synthesizer can be checked by reading from port 11. 
+  1. **DECtalk-Based Text-to-Speech (TTS) Synthesis:** the **Epson S1V30120 TTS** chip on the utilized mikroBUS "TextToSpeech Click!" daughterboard from MikroElektronika implements DECtalk v5 - a natural sounding speech synthesizer for English and Spanish, with different voices. DECtalk can even sing. The **DECtalk mode** is very powerful and versatile, but the DECtalk control language can be difficult to program. Hence, a simplified control language for the S1V30120 is offered as well, the so-called **Epson mode**. The DECtalk mode is used to implement **emulations of two classic TRS-80 Model 1 Voice Synthesizers**: the official TRS Voice Synthesizer from Tandy Radio Shack, and the VS100 Voice Synthesizer from Alpha Works. Both use the **Votrax SC-01** speech chip, which is emulated by means of DECtalk here. The DECtalk and Epson modes produce superior speech quality, and text-to-speech is performed by Talker/80 itself, i.e., no breaking down into phonemes is required. Text to be spoken can be sent directly to IO port 11, and the status of the speech synthesizer is checked by reading from port 11. 
 
-  2. **TRS Voice Synthesizer Emulation**: the emulation in terms of DECtalk as just described is good enough to produce understandable speech, but it sounds different than the Votrax SC-01 chip. Original software such as the TRS Voice Synthesizer BASIC Demo Program, and "Talking Eliza", work without software changes and. The emulation is only 80% faitful or so. A main difference between the emulation and the original is that it is not possible to utter phonemes "in realtime", since DECtalk requires buffering of phonemes first before they can be spoken. Whereas the SC-01 is able to "turn on and off" a phoneme immediately and also use them as "sound effects". This is exploited, for example, in the TRS Voice Synthesizer BASIC Demo Program, which spells out individual phonemes in real time ("the phonemes in the word zero are: z e r o" etc.) Due to the buffering required for DECtalk, this is challenging to get right. Check out my demo videos to see if you can live with the result. Due to the method of IO being used, the TRS Voice Synthesizer (and its Talker/80 emulation) can only be used if connected directly to the Model 1's expansion port! It will not work behind the Expansion Interface. The reason being that Video RAM snooping is used as the IO method, and the RAM READ and WRITE signals are not available at the Expansion Interface expansion port. Note that Talker/80 is equipped with an expansion port passthrough edge connector, so the Expansion Interface can be connected to the Talker/80 *behind* it. 
+  2. **TRS Voice Synthesizer Emulation**: the emulation in terms of DECtalk as just described is good enough to produce understandable speech, but it sounds different than the Votrax SC-01 chip. Original software such as the TRS Voice Synthesizer BASIC Demo Program, and "Talking Eliza" work out of the box, but note that the emulation is only 80% faithful or so. A main difference between the emulation and the original synthesizers is that it is not possible to utter phonemes "in realtime", since DECtalk requires buffering of phonemes first before they can be spoken. Whereas the SC-01 is able to "turn on and off" a phoneme immediately and also use them as "sound effects". This is exploited, for example, in the TRS Voice Synthesizer BASIC Demo Program, which spells out individual phonemes in real time ("the phonemes in the word zero are: z e r o" etc.) Due to the buffering requirement for DECtalk, this is challenging to get right. Please check out my demo videos below to see if you can live with the result. Due to the method of IO being used, the TRS Voice Synthesizer (and its Talker/80 emulation) can only be used if connected directly to the Model 1 expansion port. It will not work behind the Expansion Interface. This is because *Video RAM snooping* is used as the IO method, and the RAM READ and WRITE signals are not available from the Expansion Interface passthrough expansion port connector. Note that Talker/80 is equipped with an expansion port passthrough edge connector for that reason, so the Expansion Interface can be connected to  Talker/80 *behind* it. 
 
- 3. **VS100 Voice Synthesizer from Alpha Works Emulation**: another classic TRS-80 voice synthesizer. Also used the Votrax SC-01, but was / is not compatible with the TRS Voice Synthesizer. Talker/80 uses the same method of emulation (mapping to DECtalk phonemes). Same comments wrt. buffering etc. apply. Original software works without patches (e.g., VS48 and VS100DEMO.BAS etc.). In addition, pitch control is not supported, so the speech will be monotonous. 
+ 3. **VS100 Voice Synthesizer from Alpha Works Emulation**: another classic TRS-80 voice synthesizer. Also used the Votrax SC-01, but was / is not compatible with the TRS Voice Synthesizer. Talker/80 uses the same method of emulation (mapping to DECtalk phonemes). Same comments wrt. buffering etc. apply. Original software works without patches (e.g., VS48 and VS100DEMO.BAS etc.). In addition, **pitch control is currently no supported**, so the speech will be monotonous. 
 
- 4. **Cassette Sound Input Port and Audio Mixer**: Talker/80 is equipped with two input stero mini jacks; one for the output from the MikroElektronika speech daughterboard, and one can be connected to the TRS 80 Cassette Output Port (for sound). The signals are being mixed. Two input pots on the right and corresponding trimmers on the left side are used to determine the two signal levels for the mix. The mixed LM741 output signal is available at the output mini jack on the left side. 
+ 4. **Cassette Sound Input Port and Audio Mixer**: Talker/80 is equipped with two input stero mini jacks - one for the output from the MikroElektronika speech daughterboard, and one can be connected to the TRS 80 Cassette Output Port for sound (or any other source, really). The signals are being mixed. Two input pots on the right and corresponding trimmers on the left side are used to determine the two signal levels for the mix. The mixed LM741 output signal is available at the output mini jack on the left side. 
 
  5. **Optional Amplifier and Loudspeaker**: In addition, a little "off the shelf" D-class audio amplifier can be fitted on the PCB. The two input signals (after the pots / trimmers) is being amplified. The output is available to the loudspeaker pin header at the back of the PCB. The output volume is controlled by the trimmer / pot at the top right.  
 
- 6. **Expansion Port Pass Through Connector**: Talker/80 connects directly to the Model 1's expansion port. The expansion port connector is at the back of the PCB. The Expansion Interface (EI) is then connected to Talker/80's expansion port passthrough edge connector. Talker/80 is fully compatible with the EI, Floppy Disks, FreHD, etc. 
+ 6. **Expansion Port Pass Through Connector**: Talker/80 connects directly to the Model 1 expansion port. The expansion port connector is at the back of the PCB. The Expansion Interface (EI) is then connected to Talker/80's expansion port passthrough edge connector. Talker/80 is fully compatible with the EI, Floppy Disks, FreHD, etc. 
 
  7. **DIP Switch for Initial Mode Selection**: for selecting the intial startup mode of Talker/80. The mode can be changed via software as well (by sending a so-called "control byte"). 
 
@@ -87,7 +87,7 @@ Talker/80 **listens to port 11**. For the text content, 7 bit ASCII is being use
 
 ASCII characters being sent to port 11 which have its 8th bit set (i.e., bytes > 127) are being interpreted as **control bytes**. Control bytes are used to control the Talker/80, i.e., to change its current mode, to change parameters of the speech (voice, speak rate, volume), etc. The list of control bytes is given below. For example, to reset Talker/80, send 255 to IO port 11 (use ``out 11,255`` in BASIC).    
 
-Speech can be **blocking or non-blocking**. In the blocking mode, the Model 1's Z80 CPU is suspended by pulling Z80's ``WAIT`` signal low. 
+Speech can be **blocking or non-blocking**. In the blocking mode, the Model 1 Z80 CPU is suspended by pulling Z80's ``WAIT`` signal low. 
 
 ### Address Decoding in the VS100 Mode 
 
@@ -462,7 +462,7 @@ I recommend the use of standard stackable Arduino Headers for J1 and J2 (instead
 
 ![Amplifier](images/amp.jpg) 
 
-The form factors in the above BOM are **for illustration only.** Instead of ceramic disc capacitors, I have used ceramic multilayer capacitors mostly. I recommend using DIP sockets for all chips. 
+The form factors in the above BOM are **for illustration only.** Instead of ceramic disc capacitors, I have used ceramic multilayer capacitors mostly. I recommend using DIP sockets for all chips.The values for the pots / trimmers are 503, 503, and 201 (speaker volume). 
 
 
 ## Talker/80 Control Bytes 
@@ -547,7 +547,7 @@ Here are the firmware files:
 * [GAL22V10 JEDEC Databus Buffer](src/gal22v10/Talker80-databus.jed)
 * [ATmega 644 Firmware](src/atmega644/talker80-firmware.hex)
 
-For reference, the WinCUPL files for the [address decoder}(src/gal22v10/Talker80-decoder.PLD),  the 
+For reference, the WinCUPL files for the [address decoder](src/gal22v10/Talker80-decoder.PLD),  the 
 [databus buffer](src/gal22v10/Talker80-databus.PLD), and the 
 [Atmega 644 firmware C-sources](src/atmega644/talker.c) are also provided. 
 
@@ -568,8 +568,14 @@ It contains the following:
 ----------------------------------------------------------------
 | Program      | Description                                   |
 |--------------|-----------------------------------------------|
-| SENDBYTE.BAS | Send Reset Command from Z80 MC Program.       |
-| SENDBYTE.BAS | Send Reset Command from Z80 MC Program.       |
+| TALKER.BAS   | EPSON / DECTALK Text to Speech demo program.  |
+| TALKER2.BAS  | Dito, with port status reading display.       |
+| TALKER3.BAS  | Dita, and STOP command is being sent.         |
+| SENDBYTE.BAS | In EPSON or DECtalk mode, send a control byte.|
+| VOICDEMO.BAS | TRS Voice Synthesizer Demo Program.           |
+| VSDEMO.BAS   | VS100 Voice Synthesizer Demo Program.         |
+| VS48.CMD     | VS100 DOS Driver for 48 KB Machines.          |
+| VS32.CMD     | VS100 DOS Driver for 32 KB Machines.          |
 ---------------------------------------------------------------- 
 
 
