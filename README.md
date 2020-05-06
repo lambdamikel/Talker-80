@@ -1,9 +1,9 @@
 # Talker/80
 
-## A Modern Voice Synthesizer for the TRS-80 Model 1. 
+## A Modern Voice Synthesizer for the TRS-80 Model 1 
+### New Dimensions in Voice Synthesis for the Iconic "Trinity" Computer from 1977 
 
 ![TRS-80 Model 1 with Talker/80](images/DSC09771.JPG)
-
 
 ## News 
 
@@ -26,11 +26,6 @@ This project was developed using
 Programming Libraries](https://github.com/hexagon5un/AVR-Programming)
 from Elliot Williams' book "Make: AVR Programming" are being used. 
 
-## Building and Maker Support 
-
-I am able to provide Talker/80 as a kit, or only pre-programmed
-components (GALs, Atmega), or even a fully assembled version inlcuding
-a connection cable. Send me a mail if you are interrested.
 
 ## Introduction
 
@@ -75,7 +70,7 @@ It is very important that your equipment is powered on in the right order of seq
 ## Hardware Description
 
 
-Talker/80 uses an Atmega 644-20 (U4) clocked at 20 Mhz as its microcontroller. The firmware has ~ 45 KBs. The firmware was programmed in C, using the WinAVR / GCC toolchain. At startup, the Atmega loads the Epson firmware image (implementing DECtalk) over SPI into the speech daughterboard. At runtime, SPI is used as well. External interupts are being used to register read and write requests. The address decoding is done by a GAL20V10 (U1), and another GAL20V10 (U2) is acting as a tristate databus latch and also provides status input (bits 6 and 7) to the Model 1 in all modes other than the TRS Voice Synthesizer emulation mode. U5 is the op-amp. 
+Talker/80 uses an ATmega 644-20 (U4) clocked at 20 Mhz as its microcontroller. The firmware has ~ 45 KBs. The firmware was programmed in C, using the WinAVR / GCC toolchain. At startup, the ATmega loads the Epson firmware image (implementing DECtalk) over SPI into the speech daughterboard. At runtime, SPI is used as well. External interupts are being used to register read and write requests. The address decoding is done by a GAL20V10 (U1), and another GAL20V10 (U2) is acting as a tristate databus latch and also provides status input (bits 6 and 7) to the Model 1 in all modes other than the TRS Voice Synthesizer emulation mode. U5 is the op-amp. 
 
 The current mode of Talker/80 is being signaled to the address decoder GAL U2, using 2 bits for the 4 different modes. Depending on the mode, the GAL U2 eiher decodes IO requests (using IN and OUT signals), or video RAM addresses (and signals RD and WR) to implement "video snooping" as required for the TRS Voice Synthesizer. The details can be found in the GAL code here.
 
@@ -467,71 +462,48 @@ The form factors in the above BOM are **for illustration only.** Instead of cera
 
 ## Talker/80 Control Bytes 
 
-Soon. 
+These are the control bytes that are ONLY understood in the EPSON and DECtalk modes, in order to prevent interference with screen printing (TRS Voice Synth) and pitch control bit (VS100). However, you can change the firmware if desired to change this. 
 
-    switch ( control_byte ) {
+Default settings are shown in **bold**:  
 
-	// 255
-      case 0xFF : process_reset(); break; 
-	// 254
-      case 0xFE : STOP_NOW = SPEAKING_NOW;  break; 
-	// 253 
-      case 0xFD : disable();  break; 
-	// 252
-      case 0xFC : blocking_speech();  break; 
-	// 251 
-      case 0xFB : non_blocking_speech();  break; 
-
-	// 239 
-      case 0xEF : native_mode_epson(); break; 
-	// 238
-      case 0xEE : native_mode_dectalk(); break; 
-	// 237 
-      case 0xED : trs_mode(); break; 
-	// 236 
-      case 0xEC : trs_mode_counter_based(); break; 
-	// 235 
-      case 0xEB : vs100_mode(); break; 
-	// 234 
-      case 0xEA : confirmations_on(); break;  
-	// 233 
-      case 0xE9 : confirmations_off(); break;   
-	// 232 
-      case 0xE8 : english(); break; 
-	// 231 
-      case 0xE7 : spanish(); break; 
-	// 230 
-      case 0xE6 : enable_alternate(); break;  
-	// 229 
-      case 0xE5 : disable_alternate(); break;   
-	// 228 
-      case 0xE4 : announce_cur_mode(); break; 
-	// 227 
-      case 0xE3 : speak_copyright_note(); break; 
-	// 226 
-      case 0xE2 : speak_hal9000_quote(); break; 
-	// 225 
-      case 0xE1 : sing_daisy(); break; 
-	// 224 
-      case 0xE0 : speak_version(); break; 
-
-	// 208 - 223 
-      case 0xD0 ... 0xDF : set_pitch( control_byte - 0xD0); break; 
-
-	// 192 - 207
-      case 0xC0 : set_voice_default(); break;
-      case 0xC1 ... 0xCD : set_voice( control_byte - 0xC0); break; 
-
-	// 176 - 191 
-      case 0xB0 : set_volume_default(); break;
-      case 0xB1 ... 0xBF : set_volume( control_byte - 0xB0); break;
-
-	// 160 - 175 
-      case 0xA0 : set_rate_default(); break;
-      case 0xA1 ... 0xAF : set_rate( control_byte - 0xA0); break;
-
-    }
-
+-------------------------------------------------------------------------------------
+| Control Byte | Description                                                        |
+|--------------|--------------------------------------------------------------------|
+| 0xFF / 255   | Reset Talker/80. DIP settings determines mode.                     |
+| 0xFE / 254   | Immediately stop speaking.                                         | 
+| 0xFD / 253   | Disable Talker/80 until hardware reset.                            |
+| 0xFC / 252   | Pull Z80 WAIT states while speaking.                               |
+| 0xFB / 251   | **Don't pull Z80 WAIT states while speaking.**                     |
+|-----------------------------------------------------------------------------------|
+| 0xEF / 239   | **Enable EPSON mode.**                                             |
+| 0xEE / 238   | Enable DECtalk mode.                                               |
+| 0xED / 237   | Enable TRS Voice Synth mode. "?"-based segmentation of input.      |
+| 0xEC / 236   | Enable TRS Voice Synth mode 2. Timer-based segmentation of input.  |
+| 0xEB / 235   | VS100 mode.                                                        | 
+| 0xEA / 234   | **Enable audible command confirmations (for control bytes).**      | 
+| 0xE9 / 233   | Disable audible command confirmations (for control bytes).         | 
+| 0xE8 / 232   | **Enable English.**                                                | 
+| 0xE7 / 231   | Enable Castilian Spanish.                                          | 
+| 0xE6 / 230   | Enable alternate VS100 / TRS Voice Synth pronounciation.           | 
+| 0xE5 / 229   | **Use normal VS100 / TRS Voice Synth pronounciation.**             | 
+| 0xE4 / 228   | Announce current mode.                                             | 
+| 0xE3 / 227   | Speak copyright info.                                              | 
+| 0xE2 / 226   | Quote HAL9000.                                                     | 
+| 0xE1 / 225   | DECtalk singing demo - "Daisy".                                    | 
+| 0xE0 / 224   | Speak current version number.                                      | 
+|-----------------------------------------------------------------------------------|
+| 0xD0 / 208   | **Use default pitch of voice.**                                    | 
+| 0xD1 - 0xDF / 209 - 223   | Use corresponding voice pitch.                        | 
+|-----------------------------------------------------------------------------------|
+| 0xC0 / 192   | **Use default voice.**                                             | 
+| 0xC1 - 0xCF / 193 - 207   | Use corresponding voice. Not all voices are defined.  | 
+|-----------------------------------------------------------------------------------|
+| 0xB0 / 176   | **Use default volume.**                                            | 
+| 0xB1 - 0xBF / 177 - 191   | Use corresponding voice volume.                       | 
+|-----------------------------------------------------------------------------------|
+| 0xA0 / 160   | **Use default speak rate.**                                        | 
+| 0xA1 - 0xAF / 161 - 175   | Use corresponding speak rate.                         | 
+-------------------------------------------------------------------------------------
 
 
 ## Talker/80 Programming 
@@ -549,9 +521,9 @@ Here are the firmware files:
 
 For reference, the WinCUPL files for the [address decoder](src/gal22v10/Talker80-decoder.PLD),  the 
 [databus buffer](src/gal22v10/Talker80-databus.PLD), and the 
-[Atmega 644 firmware C-sources](src/atmega644/talker.c) are also provided. 
+[ATmega 644 firmware C-sources](src/atmega644/talker.c) are also provided. 
 
-The Atmega can be programmed with an EPROM programmer such as the inexpensive USB TL866II which can be found on Ebay and/or Amazon for ~
+The ATmega can be programmed with an EPROM programmer such as the inexpensive USB TL866II which can be found on Ebay and/or Amazon for ~
 30 USD. The fuse settings required for Talker/80's 20 MHz external clock are shown in the following picture:
 
 ![Fuse Settings](images/atmega-flash-config.jpg)
@@ -563,7 +535,7 @@ There are a couple of demo programs.
 The main disk is called [`talker80.hfe`](trs80/images/talker80.hfe) and 
 (or [`talker80.jv3`](trs80/images/talker80.jve). The disk loads with LDOS 3.51. 
 
-It contains the following: 
+It contains the following ('soon' means not yet on the disk / in the repository, but will be uploaded soon): 
 
 ----------------------------------------------------------------
 | Program      | Description                                   |
@@ -572,6 +544,9 @@ It contains the following:
 | TALKER2.BAS  | Dito, with port status reading display.       |
 | TALKER3.BAS  | Dita, and STOP command is being sent.         |
 | SENDBYTE.BAS | In EPSON or DECtalk mode, send a control byte.|
+| ELIZA.BAS    | EPSON-based talking Eliza (soon).             |
+| SPANISH.BAS  | Spanish-speaking demo (soon).                 |
+| SINGING.BAS  | DECtalk singing demo (soon).                  |
 | VOICDEMO.BAS | TRS Voice Synthesizer Demo Program.           |
 | VSDEMO.BAS   | VS100 Voice Synthesizer Demo Program.         |
 | VS48.CMD     | VS100 DOS Driver for 48 KB Machines.          |
@@ -608,7 +583,7 @@ Final version of Talker/80 - with ampflifier board fitted and Model 1 connector 
 
 ## Maker Support 
 
-The Gerbers and Firmware and all specs (BOM, ...) are all open source and in principle you can build one yourself. However, if you require certain parts or a pre-programmed GALs, the Atmega, or even a fully assembled Talker/80, please contact me. 
+The Gerbers and Firmware and all specs (BOM, ...) are all open source and in principle you can build one yourself. However, if you require certain parts or a pre-programmed GALs, the ATmega, or even a fully assembled Talker/80, please contact me. 
 
 ## Acknowledgements
 
