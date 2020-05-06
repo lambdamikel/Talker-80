@@ -543,8 +543,9 @@ The ATmega can be programmed with an EPROM programmer such as the inexpensive US
 
 There are a couple of demo programs.
 
-The main disk is called [`talker80.hfe`](trs80/images/talker80.hfe) and 
-(or [`talker80.jv3`](trs80/images/talker80.jve). The disk loads with LDOS 3.51. 
+The main disk is called [`talker80.hfe`](trs80/images/talker80.hfe)
+(or [`talker80.jv3`](trs80/images/talker80.jve)). The disk loads with
+LDOS 3.51.
 
 It contains the following ('soon' means not yet on the disk / in the repository, but will be uploaded soon): 
 
