@@ -547,7 +547,7 @@ The main disk is called [`talker80.hfe`](trs80/images/talker80.hfe)
 (or [`talker80.jv3`](trs80/images/talker80.jve)). The disk loads with
 LDOS 3.51.
 
-It contains the following ('soon' means not yet on the disk / in the repository, but will be uploaded soon): 
+It contains the following: 
 
 ----------------------------------------------------------------
 | Program      | Description                                   |
