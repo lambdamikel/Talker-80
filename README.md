@@ -552,17 +552,23 @@ It contains the following ('soon' means not yet on the disk / in the repository,
 ----------------------------------------------------------------
 | Program      | Description                                   |
 |--------------|-----------------------------------------------|
-| TALKER.BAS   | EPSON / DECTALK Text to Speech demo program.  |
-| TALKER2.BAS  | Dito, with port status reading display.       |
-| TALKER3.BAS  | Dita, and STOP command is being sent.         |
+| BASIC        | Disk BASIC to run the programs.               |
+| WELCOME.BAS  | Talker/80 Introduction Demo Program.          |
+| ENGLISH.BAS  | EPSON MODE English speaking demo.             |
+| SPANISH.BAS  | EPSON MODE Spanish speaking demo.             |
+| TALKER.BAS   | EPSON / DECtalk text-to-speech demo program.  |
+| TALKER2.BAS  | Dito, with status port reading display.       |
+| TALKER3.BAS  | Dito, plust STOP command from keyboard.       |
 | SENDBYTE.BAS | In EPSON or DECtalk mode, send a control byte.|
-| ELIZA.BAS    | EPSON-based talking Eliza (soon).             |
-| SPANISH.BAS  | Spanish-speaking demo (soon).                 |
-| SINGING.BAS  | DECtalk singing demo (soon).                  |
+| ELIZA80.BAS  | Jeff Shrager's Eliza for Talker/80 EPSON Mode.|
+| BUSYTEST.BAS | INP(11) port busy signal read test.           |
+| HELLO.BAS    | Simple TRS Voice Synthesizer "HELLO" test.    |
 | VOICDEMO.BAS | TRS Voice Synthesizer Demo Program.           |
-| VSDEMO.BAS   | VS-100 Voice Synthesizer Demo Program.         |
-| VS48.CMD     | VS-100 DOS Driver for 48 KB Machines.          |
-| VS32.CMD     | VS-100 DOS Driver for 32 KB Machines.          |
+| VSDEMO.BAS   | VS-100 Voice Synthesizer Demo Program.        |
+| VS48.CMD     | VS-100 DOS Driver for 48 KB Machines.         |
+| VS32.CMD     | VS-100 DOS Driver for 32 KB Machines.         |
+| VS******.CMD | VS-100 Programs. See VS-100 manual.           |
+| FROGGER1.CMD | For testing the cassette port sound input.    |
 ---------------------------------------------------------------- 
 
 
