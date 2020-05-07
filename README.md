@@ -597,6 +597,7 @@ Final version of Talker/80 - with ampflifier board fitted and Model 1 connector 
 - [Towards the TRS Voice Synthesizer Emulation](https://youtu.be/rNow4joSyGI?list=PLvdXKcHrGqhcJzzogLMI-J4Or-ap6UVSY) 
 - [VS-100 Emulation and More Complete Demo of Features ](https://youtu.be/aMnv22EwFEc?list=PLvdXKcHrGqhcJzzogLMI-J4Or-ap6UVSY) 
 - ["Talking Eliza" with Talker/80](https://youtu.be/Vv27CSFUAi0?list=PLvdXKcHrGqhcJzzogLMI-J4Or-ap6UVSY)
+- [Demonstration of Talker/80 BASIC DEMO Programs](https://youtu.be/ctfGo_UebRY?list=PLvdXKcHrGqhcJzzogLMI-J4Or-ap6UVSY)
 
 
 ## Maker Support 
