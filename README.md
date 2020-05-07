@@ -31,11 +31,11 @@ from Elliot Williams' book "Make: AVR Programming" are being used.
 
 Talker/80 offers: 
 
-  1. **DECtalk-Based Text-to-Speech (TTS) Synthesis:** the **Epson S1V30120 TTS** chip on the utilized mikroBUS "TextToSpeech Click!" daughterboard from MikroElektronika implements DECtalk v5 - a natural sounding speech synthesizer for English and Spanish, with different voices. DECtalk can even sing. The **DECtalk mode** is very powerful and versatile, but the DECtalk control language can be difficult to program. Hence, a simplified control language for the S1V30120 is offered as well, the so-called **Epson mode**. The DECtalk mode is used to implement **emulations of two classic TRS-80 Model 1 Voice Synthesizers**: the official TRS Voice Synthesizer from Tandy Radio Shack, and the VS100 Voice Synthesizer from Alpha Works. Both use the **Votrax SC-01** speech chip, which is emulated by means of DECtalk here. The DECtalk and Epson modes produce superior speech quality, and text-to-speech is performed by Talker/80 itself, i.e., no breaking down into phonemes is required. Text to be spoken can be sent directly to IO port 11, and the status of the speech synthesizer is checked by reading from port 11. 
+  1. **DECtalk-Based Text-to-Speech (TTS) Synthesis:** the **Epson S1V30120 TTS** chip on the utilized mikroBUS "TextToSpeech Click!" daughterboard from MikroElektronika implements DECtalk v5 - a natural sounding speech synthesizer for English and Spanish, with different voices. DECtalk can even sing. The **DECtalk mode** is very powerful and versatile, but the DECtalk control language can be difficult to program. Hence, a simplified control language for the S1V30120 is offered as well, the so-called **Epson mode**. The DECtalk mode is used to implement **emulations of two classic TRS-80 Model 1 Voice Synthesizers**: the official TRS Voice Synthesizer from Tandy Radio Shack, and the VS-100 Voice Synthesizer from Alpha Products. Both use the **Votrax SC-01** speech chip, which is emulated by means of DECtalk here. The DECtalk and Epson modes produce superior speech quality, and text-to-speech is performed by Talker/80 itself, i.e., no breaking down into phonemes is required. Text to be spoken can be sent directly to IO port 11, and the status of the speech synthesizer is checked by reading from port 11. 
 
   2. **TRS Voice Synthesizer Emulation**: the emulation in terms of DECtalk as just described is good enough to produce understandable speech, but it sounds different than the Votrax SC-01 chip. Original software such as the TRS Voice Synthesizer BASIC Demo Program, and "Talking Eliza" work out of the box, but note that the emulation is only 80% faithful or so. A main difference between the emulation and the original synthesizers is that it is not possible to utter phonemes "in realtime", since DECtalk requires buffering of phonemes first before they can be spoken. Whereas the SC-01 is able to "turn on and off" a phoneme immediately and also use them as "sound effects". This is exploited, for example, in the TRS Voice Synthesizer BASIC Demo Program, which spells out individual phonemes in real time ("the phonemes in the word zero are: z e r o" etc.) Due to the buffering requirement for DECtalk, this is challenging to get right. Please check out my demo videos below to see if you can live with the result. Due to the method of IO being used, the TRS Voice Synthesizer (and its Talker/80 emulation) can only be used if connected directly to the Model 1 expansion port. It will not work behind the Expansion Interface. This is because *Video RAM snooping* is used as the IO method, and the RAM READ and WRITE signals are not available from the Expansion Interface passthrough expansion port connector. Note that Talker/80 is equipped with an expansion port passthrough edge connector for that reason, so the Expansion Interface can be connected to  Talker/80 *behind* it. 
 
- 3. **VS100 Voice Synthesizer from Alpha Works Emulation**: another classic TRS-80 voice synthesizer. Also used the Votrax SC-01, but was / is not compatible with the TRS Voice Synthesizer. Talker/80 uses the same method of emulation (mapping to DECtalk phonemes). Same comments wrt. buffering etc. apply. Original software works without patches (e.g., VS48 and VS100DEMO.BAS etc.). In addition, **pitch control is currently no supported**, so the speech will be monotonous. 
+ 3. **VS-100 Voice Synthesizer from Alpha Products Emulation**: another classic TRS-80 voice synthesizer. Also used the Votrax SC-01, but was / is not compatible with the TRS Voice Synthesizer. Talker/80 uses the same method of emulation (mapping to DECtalk phonemes). Same comments wrt. buffering etc. apply. Original software works without patches (e.g., VS48 and VS-100DEMO.BAS etc.). In addition, **pitch control is currently no supported**, so the speech will be monotonous. 
 
  4. **Cassette Sound Input Port and Audio Mixer**: Talker/80 is equipped with two input stero mini jacks - one for the output from the MikroElektronika speech daughterboard, and one can be connected to the TRS 80 Cassette Output Port for sound (or any other source, really). The signals are being mixed. Two input pots on the right and corresponding trimmers on the left side are used to determine the two signal levels for the mix. The mixed LM741 output signal is available at the output mini jack on the left side. 
 
@@ -84,11 +84,11 @@ ASCII characters being sent to port 11 which have its 8th bit set (i.e., bytes >
 
 Speech can be **blocking or non-blocking**. In the blocking mode, the Model 1 Z80 CPU is suspended by pulling Z80's ``WAIT`` signal low. 
 
-### Address Decoding in the VS100 Mode 
+### Address Decoding in the VS-100 Mode 
 
-The primary IO port the VS100 is also port 11. And like in the Epson and DECtalk modes, one can read the status from port 11. Bit 7 indicates if it is busy speaking. 
+The primary IO port the VS-100 is also port 11. And like in the Epson and DECtalk modes, one can read the status from port 11. Bit 7 indicates if it is busy speaking. 
 
-However, partial / lazy address decoding was being used for the VS100 (to reduce decoder complexity and hence chip counts), and so, according to information from members of the Vintage Computer Forum, the following IO ports can also be used to address the VS100  ("it responds if bits 7, 5, 4 and 2 are 0, don't care for others"):
+However, partial / lazy address decoding was being used for the VS-100 (to reduce decoder complexity and hence chip counts), and so, according to information from members of the Vintage Computer Forum, the following IO ports can also be used to address the VS-100  ("it responds if bits 7, 5, 4 and 2 are 0, don't care for others"):
 
 - 0, 1, 2, 3
 - 8, 9, 10, **11** 
@@ -100,16 +100,16 @@ Unlike the DECtalk and EPSON modes, text to speech / encoding of text into phone
 These are the SC-01 phonemes; the VS-100 phonemes are identical: 
 ![SC-01 Phonemes](images/sc01-phonemes.jpg)
 
-Note that, in order to do the text-to-speech / phoneme mapping, the VS100 software driver can be used (the programs ``VS48`` and ``VS32``). These drivers allow text-to-speech from BASIC then, so the driver performs the text to phoneme mapping.   
+Note that, in order to do the text-to-speech / phoneme mapping, the VS-100 software driver can be used (the programs ``VS48`` and ``VS32``). These drivers allow text-to-speech from BASIC then, so the driver performs the text to phoneme mapping.   
 
-Talker/80 **does not implement the pitch control feature of the SC-01.** The VS-100 uses the last two bits (Bits 6 and 7) of the phoneme bytes to encode / provide pitch control; i.e., each phoneme has in principle 4 different "pronounciations" or "pitches".  These two pitch bits on phonemes are currently being ignored by Talker/80 and hence not supported. To prevent interference with existing VS100 software, the control bytes understood by Talker/80 in the DECtalk and EPSON modes, are NOT supported in the VS100 mode. 
+Talker/80 **does not implement the pitch control feature of the SC-01.** The VS-100 uses the last two bits (Bits 6 and 7) of the phoneme bytes to encode / provide pitch control; i.e., each phoneme has in principle 4 different "pronounciations" or "pitches".  These two pitch bits on phonemes are currently being ignored by Talker/80 and hence not supported. To prevent interference with existing VS-100 software, the control bytes understood by Talker/80 in the DECtalk and EPSON modes, are NOT supported in the VS-100 mode. 
 
-Since control bytes are not accepted in this mode, all changes to the default settings need to be made BEFORE entering the VS100 mode. For example, if a different voice, speech rate or volume is required in the VS100 mode, then make these changes to the setting from the EPSON or DECtalk mode first, and then enter the VS100 mode from using the corresponding control byte `&EB`. The changed voice synthesizer settings will then carry over to the VS100 mode. The mode can only be exited by using the RESET button. 
+Since control bytes are not accepted in this mode, all changes to the default settings need to be made BEFORE entering the VS-100 mode. For example, if a different voice, speech rate or volume is required in the VS-100 mode, then make these changes to the setting from the EPSON or DECtalk mode first, and then enter the VS-100 mode from using the corresponding control byte `&EB`. The changed voice synthesizer settings will then carry over to the VS-100 mode. The mode can only be exited by using the RESET button. 
 
 
 Here is a picture of the **original VS-100 Voice Synthesizer:** 
 
-![VS100 Synth](images/vs100-voice-synth.png)
+![VS-100 Synth](images/vs100-voice-synth.png)
     
 
 ### Address Decoding in the TRS Voice Synthesizer Mode
@@ -117,22 +117,22 @@ Here is a picture of the **original VS-100 Voice Synthesizer:**
 The TRS Voice Synthesizer uses memory-based IO. 
 It snoops write to the video RAM in the address range ``$3FE0 .. $3FFF``. Only the temporal order of writes matters, not the actual address from that range.  Hence, in this mode, any write (WR signal) in that address range will put a byte in the buffer. 
 
-A special protocol is being used. Even though the TRS Voice Synthesizer uses the same speech chip as the VS100, the SC-01, it is not using the SC-01 phonemes directly. Rather, Tandy Radio Shack invented a "printed" phoneme character set for some of the SC-01 phonemes. A special character, the "?" opens and closes the "window" to the Voice Synthesizer. 
+A special protocol is being used. Even though the TRS Voice Synthesizer uses the same speech chip as the VS-100, the SC-01, it is not using the SC-01 phonemes directly. Rather, Tandy Radio Shack invented a "printed" phoneme character set for some of the SC-01 phonemes. A special character, the "?" opens and closes the "window" to the Voice Synthesizer. 
 
 The TRS Voice Synthesizer's printed ASCII phonemes for some of the SC-01 phonemes are the following: 
 
 ![TRS Voice Synthesizer Printed Phonemes](images/trs-phonemes.jpg)
 
-Note that, like in the VS100, control bytes are not accepted in this mode, as normal "to screen" printing  might otherwise trigger them. If a different voice setting is required in the TRS Voice Synthesizer mode (e.g., a different voice, speech rate or volume), then the setting must be changed from the EPSON or DECtalk mode first, and then the TRS Voice Synthesizer mode be entered using the control bytes `&ED` or `&EC`. The changed voice synthesizer settings will carry over to the new mode, and be active from now on. Note that the TRS Voice Synthesizer mode can then be exited only by using the RESET button (since no control bytes are accepted). 
+Note that, like in the VS-100, control bytes are not accepted in this mode, as normal "to screen" printing  might otherwise trigger them. If a different voice setting is required in the TRS Voice Synthesizer mode (e.g., a different voice, speech rate or volume), then the setting must be changed from the EPSON or DECtalk mode first, and then the TRS Voice Synthesizer mode be entered using the control bytes `&ED` or `&EC`. The changed voice synthesizer settings will carry over to the new mode, and be active from now on. Note that the TRS Voice Synthesizer mode can then be exited only by using the RESET button (since no control bytes are accepted). 
 
 Here is a picture of the **original TRS Voice Synthesizer:** 
 
-![VS100 Synth](images/trs-voice-synth.jpg)
+![VS-100 Synth](images/trs-voice-synth.jpg)
 
 
 ### Phoneme Tables and Phoneme Mappings  
 
-The VS100 and TRS Voice Synthesizer Emulations work by mapping SC-01 phonemes to DECtalk "close enough equivalents". This produces understandable speech, but the resulting speech sounds different from the original SC-01. 
+The VS-100 and TRS Voice Synthesizer Emulations work by mapping SC-01 phonemes to DECtalk "close enough equivalents". This produces understandable speech, but the resulting speech sounds different from the original SC-01. 
 
 Talker/80 implements the following mapping from SC-01 phonemes to DECtalk phonemes: 
 
@@ -422,7 +422,7 @@ The DIP switches are used for initial boot / startup mode selection (note that t
 
   - **0n 0n**: EPSON Mode. 
   - **0n Off**: TRS Voice Synthesizer Mode. 
-  - **Off On**: VS100 Voice Synthesizer Mode. 
+  - **Off On**: VS-100 Voice Synthesizer Mode. 
   - **Off Off**: DECtalk Mode.     
 
 The LEDs have the following meaning - during startup and after mode selection, they briefly indicate the selected mode. The blink in case of errors. In normal operation, they have the following meaning:    
@@ -462,7 +462,7 @@ The form factors in the above BOM are **for illustration only.** Instead of cera
 
 ## Talker/80 Control Bytes 
 
-These are the control bytes that are ONLY understood in the EPSON and DECtalk modes, in order to prevent interference with screen printing (TRS Voice Synth) and pitch control bit (VS100). However, you can change the firmware if desired to change this. 
+These are the control bytes that are ONLY understood in the EPSON and DECtalk modes, in order to prevent interference with screen printing (TRS Voice Synth) and pitch control bit (VS-100). However, you can change the firmware if desired to change this. 
 
 Default settings are shown in **bold**:  
 
@@ -483,13 +483,13 @@ Default settings are shown in **bold**:
 | 0xEE / 238   | Enable DECtalk mode.                                               |
 | 0xED / 237   | Enable TRS Voice Synth mode. "?"-based segmentation of input.      |
 | 0xEC / 236   | Enable TRS Voice Synth mode 2. Timer-based segmentation of input.  |
-| 0xEB / 235   | VS100 mode.                                                        | 
+| 0xEB / 235   | VS-100 mode.                                                        | 
 | 0xEA / 234   | **Enable audible command confirmations (for control bytes).**      | 
 | 0xE9 / 233   | Disable audible command confirmations (for control bytes).         | 
 | 0xE8 / 232   | **Enable English.**                                                | 
 | 0xE7 / 231   | Enable Castilian Spanish.                                          | 
-| 0xE6 / 230   | Enable alternate VS100 / TRS Voice Synth pronounciation.           | 
-| 0xE5 / 229   | **Use normal VS100 / TRS Voice Synth pronounciation.**             | 
+| 0xE6 / 230   | Enable alternate VS-100 / TRS Voice Synth pronounciation.           | 
+| 0xE5 / 229   | **Use normal VS-100 / TRS Voice Synth pronounciation.**             | 
 -------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------
@@ -560,9 +560,9 @@ It contains the following ('soon' means not yet on the disk / in the repository,
 | SPANISH.BAS  | Spanish-speaking demo (soon).                 |
 | SINGING.BAS  | DECtalk singing demo (soon).                  |
 | VOICDEMO.BAS | TRS Voice Synthesizer Demo Program.           |
-| VSDEMO.BAS   | VS100 Voice Synthesizer Demo Program.         |
-| VS48.CMD     | VS100 DOS Driver for 48 KB Machines.          |
-| VS32.CMD     | VS100 DOS Driver for 32 KB Machines.          |
+| VSDEMO.BAS   | VS-100 Voice Synthesizer Demo Program.         |
+| VS48.CMD     | VS-100 DOS Driver for 48 KB Machines.          |
+| VS32.CMD     | VS-100 DOS Driver for 32 KB Machines.          |
 ---------------------------------------------------------------- 
 
 
@@ -589,7 +589,7 @@ Final version of Talker/80 - with ampflifier board fitted and Model 1 connector 
 - [First Breadboard Prototype](https://youtu.be/NUp0_M16cys?list=PLvdXKcHrGqhcJzzogLMI-J4Or-ap6UVSY)
 - [First PCB Version](https://youtu.be/BFiDv-7CvXA?list=PLvdXKcHrGqhcJzzogLMI-J4Or-ap6UVSY) 
 - [Towards the TRS Voice Synthesizer Emulation](https://youtu.be/rNow4joSyGI?list=PLvdXKcHrGqhcJzzogLMI-J4Or-ap6UVSY) 
-- [VS100 Emulation and More Complete Demo of Features ](https://youtu.be/aMnv22EwFEc?list=PLvdXKcHrGqhcJzzogLMI-J4Or-ap6UVSY) 
+- [VS-100 Emulation and More Complete Demo of Features ](https://youtu.be/aMnv22EwFEc?list=PLvdXKcHrGqhcJzzogLMI-J4Or-ap6UVSY) 
 - ["Talking Eliza" with Talker/80](https://youtu.be/Vv27CSFUAi0?list=PLvdXKcHrGqhcJzzogLMI-J4Or-ap6UVSY)
 
 
