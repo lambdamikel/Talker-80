@@ -13,7 +13,6 @@
  - 5/8/2020: I am waiting for feedback from the first 3 customers before selling more. 
  - 5/11/2020: Three more Talker/80 have been assembled. I ran out of click speech boards. Need to reorder. 
  - 5/12/2020: Hackster's Instagram post shows 1.182 likes after 3 days :-) 
-
 ![TRS-80 Model 1 with Talker/80](images/hackster-instagram-post.jpg)
 
 ![Production](images/batch.jpg)
