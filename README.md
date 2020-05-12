@@ -13,7 +13,7 @@
  - 5/8/2020: I am waiting for feedback from the first three customers before selling more. 
  - 5/11/2020: Three more Talker/80 have been assembled. I ran out of click speech boards. Need to reorder. 
  - 5/12/2020: Hackster's Instagram post shows 1.182 likes after 3 days :-) 
- - 5/12/2020: Confirmed that Talker/80 Voice Synthesizer Emulation Mode also works if connected to the Expansion Interface expansion port edge connector (left front corner, left side of the EI). 
+ - 5/12/2020: Confirmed that the TRS Voice Synthesizer Emulation Mode also works from the Expansion Interface expansion port edge connector (left front corner, left side edge connector of the EI). 
 
 ![TRS-80 Model 1 with Talker/80](images/hackster-instagram-post.jpg)
 
