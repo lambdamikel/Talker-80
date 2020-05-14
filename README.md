@@ -14,6 +14,7 @@
  - 5/11/2020: Three more Talker/80 have been assembled. I ran out of click speech boards. Need to reorder. 
  - 5/12/2020: Hackster's Instagram post shows 1.182 likes after 3 days :-) 
  - 5/12/2020: Confirmed that the TRS Voice Synthesizer Emulation Mode also works from the Expansion Interface expansion port edge connector (left front corner, left side edge connector of the EI). 
+ - 5/14/2020: I was being asked in the Vintage Computer Forum about the availabilty of the Gerbers and the ATmega firmware. Currently, I am waiting to hear from the first three customers if there were any problems with theirs setups. If there are no major problems, I am going to make the Gerbers and firmware available soon, hopefully by the end of May. Stay tuned!
 
 ![TRS-80 Model 1 with Talker/80](images/hackster-instagram-post.jpg)
 
