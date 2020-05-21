@@ -15,6 +15,20 @@
  - 5/12/2020: Hackster's Instagram post shows 1.182 likes after 3 days :-) 
  - 5/12/2020: Confirmed that the TRS Voice Synthesizer Emulation Mode also works from the Expansion Interface expansion port edge connector (left front corner, left side edge connector of the EI). 
  - 5/14/2020: I was being asked in the Vintage Computer Forum about the availabilty of the Gerbers and the ATmega firmware. Currently, I am waiting to hear from the first three customers if there were any problems with theirs setups. If there are no major problems, I am going to make the Gerbers and firmware available soon, hopefully by the end of May. Stay tuned!
+ - 5/21/2020: One of the first Talker/80 users has published a positive review on the [Vintage Computer Forum](http://www.vcfed.org/forum/showthread.php?74036-Talker-80-New-Voice-Synthesizer-in-the-Making/page4). Review from **Alphasite:** 
+
+>I've had my Talker/80 for a couple of days.
+>
+>My first impression is this is very nice board and the fact that it emulates multiple voice synthesizers for the Model I is amazing.
+>
+>My first test was to connect it to my Model I and Expansion Interface and use the HFE image provided in the Github page. I ran all the included tests successfully. I was very impressed.
+>
+>My next test was to connect the Talker/80 to the Model I directly and then connect a Quinnterface/FreHD to the Talker/80. For this the power on sequence is critical. You must power on the Talker/80 first, then the Q/F combo. I didn't wait long enough and the Talker/80 would hang. The power on sequence is mentioned in the documentation and I found that if I waited for the Talker/80 to finish with the startup message before powering on the Q/F I was able to boot. It may not be necessary to wait that long but I didn't test because it's only a matter of a couple of seconds.
+>
+>My latest test was to try the Talker/80 with the MIRE and MISE. First I connected the MIRE to the Model I and then the Talker/80. I had this all on a power switch and they powered on at the same time and there wasn't an issue. I had the Talking Eliza program loaded on my MIRE emulated floppy from testing a Radio Shack Voice Synthesizer so I set the dip switches on the Talker/80 to start up in RS VS mode and reset. I then ran Talking Eliza and it worked perfectly. I then powered everything off and connected the MISE to the expansion connector on the Talker/80 and powered everything up again. Again everything came up without any issues. The Talking Eliza program still worked.
+>
+>Did I mention that I am very impressed? 
+
 
 ![TRS-80 Model 1 with Talker/80](images/hackster-instagram-post.jpg)
 
