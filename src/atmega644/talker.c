@@ -18,7 +18,7 @@
 
    Talker/80
    Copyright (C) 2020 Michael Wessel
-   LambdaSpeak comes with ABSOLUTELY NO WARRANTY. 
+   Talker/80 comes with ABSOLUTELY NO WARRANTY. 
    This is free software, and you are welcome to redistribute it
    under certain conditions. 
 
