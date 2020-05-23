@@ -470,7 +470,7 @@ and "freeRouting.jar" did the routing.
 
 [Gerbers can be found here.](gerbers/talker80-v3.zip) 
 
-A version is also hosted on the [Seeed Gallery for immediate ordering of PCBs.](https://www.seeedstudio.com/Talker80-3-g-1230571)
+A version is also hosted on [OshPark for immediate ordering of PCBs.](https://oshpark.com/shared_projects/RE78tFPR)
 
 ### Bill of Material 
 
