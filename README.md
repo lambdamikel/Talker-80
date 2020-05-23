@@ -29,6 +29,7 @@
 >
 >Did I mention that I am very impressed? 
 
+ - 5/23/2020: Firmware sources and Gerbers added. 
 
 ![TRS-80 Model 1 with Talker/80](images/hackster-instagram-post.jpg)
 
@@ -467,7 +468,7 @@ and "freeRouting.jar" did the routing.
 ![PCB](images/pcb.jpg) 
 ![KiCAD 3D Model](images/3d.jpg)
 
-[Gerbers can be found here.](gerbers/talker80.zip) 
+[Gerbers can be found here.](gerbers/talker80-v3.zip) 
 
 A version is also hosted on the [Seeed Gallery for immediate ordering of PCBs.](https://www.seeedstudio.com/Talker80-3-g-1230571)
 
