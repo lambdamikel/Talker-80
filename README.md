@@ -470,7 +470,7 @@ and "freeRouting.jar" did the routing.
 
 [Gerbers can be found here.](gerbers/talker80-v3.zip) 
 
-A version is also hosted on [OshPark for immediate ordering of PCBs.](https://oshpark.com/shared_projects/RE78tFPR)
+A version is also hosted on [OshPark for immediate ordering of PCBs.](https://oshpark.com/shared_projects/RE78tFPR) And [another one on Seeed.](https://www.seeedstudio.com/Talker-80-Voice-Synthesizer-for-the-TRS-80-Model-1-g-1282942)
 
 ### Bill of Material 
 
