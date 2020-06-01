@@ -32,6 +32,10 @@
  - 5/23/2020: Firmware sources and Gerbers added. 
  - 5/24/2020: Link to Seeed Gallery for PCB ordering added. Note that there is also the OshPark link - the OshPark PCBs have far superior quality (copper instead of tin!), but are also a bit more pricey. However, the higher quality might pay off especially considering the Talker/80 expansion port connector  passthrough. 
  - 5/24/2020: 6 Talker/80 have been sold by now - thanks a lot for supporting the project! 
+ - 5/31/2020: 9 Talker/80 have been sold. MATRIXSYNTH.COM tweeted about Talker/80: 
+
+![Matrixsynth Talker/80](images/matrixsynth.jpg)
+
 
 ![TRS-80 Model 1 with Talker/80](images/hackster-instagram-post.jpg)
 
