@@ -10,6 +10,9 @@
  - 5/5/2020: Talker/80 is now available!
  - 5/6/2020: The first three Talker/80's have been sold! 
  - 5/7/2020: [Hackster posted the Talker/80 story.](https://www.hackster.io/news/michael-wessel-s-talker-80-brings-back-the-classic-trs-80-voice-synthesizer-add-on-bfe66999ac29) 
+
+![TRS-80 Model 1 with Talker/80](images/hackster-instagram-post.jpg)
+
  - 5/8/2020: I am waiting for feedback from the first three customers before selling more. 
  - 5/11/2020: Three more Talker/80 have been assembled. I ran out of click speech boards. Need to reorder. 
  - 5/12/2020: Hackster's Instagram post shows 1.182 likes after 3 days :-) 
@@ -40,8 +43,6 @@
  - 6/16/2020: Check out [**TRS-80 TrashTalk Episode 36**](https://www.trs80trashtalk.com/2020/06/episode-36.html) **Eric Dittman's review of Talker/80!** Thanks to Eric and the TrashTalkers for supporting this project! 
 
 ![TRS-80 TashTalk Episode 36](images/trashtalk.jpg)
-
-![TRS-80 Model 1 with Talker/80](images/hackster-instagram-post.jpg)
 
 ![Production](images/batch.jpg)
 
