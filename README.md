@@ -36,8 +36,10 @@
 
 ![Matrixsynth Talker/80](images/matrixsynth.jpg)
 
- - 6/9/2020: The **Talker/80 Model 3 & Model 4** version has been designed and been sent to OshPark for PCB fabrication´. 
+ - 6/9/2020: The **Talker/80 Model 3 & Model 4** version has been designed and been sent to OshPark for PCB fabrication. 
  - 6/16/2020: Check out [**TRS-80 TrashTalk Episode 36**](https://www.trs80trashtalk.com/2020/06/episode-36.html) **Eric Dittman's review of Talker/80!** Thanks to Eric and the TrashTalkers for supporting this project! 
+
+![TRS-80 TashTalk Episode 36](images/trashtalk.jpg)
 
 ![TRS-80 Model 1 with Talker/80](images/hackster-instagram-post.jpg)
 
