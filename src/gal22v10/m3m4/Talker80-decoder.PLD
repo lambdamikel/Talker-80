@@ -1,0 +1,75 @@
+Name     Talker80-Encoder ;
+PartNo   00 ;
+Date     03.07.2020 ;
+Revision 01 ;
+Designer Michael Wessel / LambdaMikel ;
+Company  Home ;
+Assembly None ;
+Location  ;
+Device   g22v10 ;
+
+/**  Inputs  **/
+
+// 00 = NATIVE
+// 01 = TRS TALKER - NOT SUPPORT FOR MODEL 3 / 4 ! 
+// 10 = VS100
+// 11 = DECTALK 
+
+
+PIN 1    =  MODE_SEL0 ;
+PIN 2    =  MODE_SEL1 ;
+
+PIN 3    =  adr0 ;
+PIN 4    =  adr1 ;   
+PIN 5    =  adr2 ;   
+PIN 6    =  adr3 ; 
+PIN 7    =  adr4 ;
+PIN 8    =  adr5 ; 
+PIN 9    =  adr6 ; 
+PIN 10   =  adr7 ;
+
+PIN 18   =  NIN ;
+PIN 19   =  NOUT ;
+PIN 17   =  NIOREQ ;
+
+PIN 21 = EXTIOSEL ; 
+PIN 22 = SPEECH_READ ; 
+PIN 23 = SPEECH_WRITE ; 
+
+//
+
+IOIN  = ! NIN  & !NIOREQ ; 
+IOOUT = ! NOUT & !NIOREQ ; 
+
+// 00 = NATIVE
+
+NATIVE_MODE = !MODE_SEL0 & !MODE_SEL1 ; 
+
+// 01 = TRS TALKER - NOT SUPPORTED BY MODEL 3 / 4! 
+
+TRS_MODE = MODE_SEL0 & !MODE_SEL1 ; 
+
+// 10 = VS100
+
+VS100_MODE = !MODE_SEL0 & MODE_SEL1 ; 
+
+// 11 = DecTalk  
+
+FUTURE_MODE = MODE_SEL0 & MODE_SEL1 ; 
+
+// IO Port 11
+  
+DECODED = adr0 & adr1 & !adr2 & adr3 & !adr4 & !adr5 & !adr6 & !adr7;  
+
+// BYTE RECEIVED: 
+SPEECH_WRITE = DECODED & IOOUT  ; 
+
+// READ STATUS BIT / BYTE FROM AVR: ONLY FOR NATIVE AND VS100: 
+SPEECH_READ  =  DECODED & IOIN ;  
+
+// MUST BE LOW FOR IOREQ IN, ELSE HIGH 
+EXTIOSEL = ! SPEECH_READ ;  
+
+
+
+

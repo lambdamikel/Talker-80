@@ -1,0 +1,102 @@
+Name     Talker80-Encoder ;
+PartNo   00 ;
+Date     08.03.2020 ;
+Revision 01 ;
+Designer Michael Wessel / LambdaMikel ;
+Company  Home ;
+Assembly None ;
+Location  ;
+Device   g22v10 ;
+
+
+/**  Inputs  **/
+
+// 00 = NATIVE
+// 01 = TRS TALKER
+// 10 = VS100
+// 11 = ... 
+
+PIN 1    =  MODE_SEL0 ;
+PIN 2    =  MODE_SEL1 ;
+
+PIN 3    =  adr2 ;
+PIN 4    =  adr3 ;   
+PIN 5    =  adr4 ;   
+PIN 6    =  adr5 ; 
+PIN 7    =  adr6 ;
+PIN 8    =  adr7 ; 
+PIN 9    =  adr8 ; 
+PIN 10   =  adr9 ;
+PIN 11   =  adr10 ;    
+PIN 13   =  adr11 ;  
+PIN 14   =  adr12 ; 
+PIN 15   =  adr13 ;
+PIN 16   =  adr14 ;
+PIN 17   =  adr15 ;
+
+PIN 18   =  IOIN ;
+PIN 19   =  IOOUT ;
+PIN 20   =  MEMRD ;
+PIN 21   =  MEMWR ; 
+
+/* *************** OUTPUT PINS *********************/
+ 
+PIN 22 = SPEECH_READ ; 
+PIN 23 = SPEECH_WRITE ; 
+
+// 00 = NATIVE
+
+NATIVE_MODE = !MODE_SEL0 & !MODE_SEL1 ; 
+
+// 01 = TRS TALKER
+
+TRS_MODE = MODE_SEL0 & !MODE_SEL1 ; 
+
+// 10 = VS100
+
+VS100_MODE = !MODE_SEL0 & MODE_SEL1 ; 
+
+// 11 = ... 
+
+FUTURE_MODE = MODE_SEL0 & MODE_SEL1 ; 
+
+// fbee = 1111 1011 1110 1110 and ! AMDRUM_ENABLE 
+// faee = 1111 1010 1110 1110  
+ 
+// VS100: 
+// It responds if bits 7, 5, 4 and 2 are 0, don't care for others 
+// results in addresses: 
+// 0, 1, 2, 3
+// 8, 9, 10, 11
+// 64, 65, 66, 67
+// 72, 73, 74, 75 
+
+// **** **** 0*00 *0**               
+
+VS100 =  !adr2 & !adr4 & !adr5 & !adr7 & VS100_MODE ; 
+
+// use the same ports for native mode now: 
+NATIVE = !adr2 & !adr4 & !adr5 & !adr7 & NATIVE_MODE ; 
+
+// TRS mem address: $3FE0 .. $3FFF 
+// 0011 1111 1110 0000 - 0011 1111 1111 1111 
+
+TRS = !adr15 & !adr14 & adr13 & adr12 & 
+       adr11 &  adr10 & adr9 &   adr8 & 
+        adr7 &  adr6  & adr5 
+      & TRS_MODE ;  
+
+// OK, since adr0 and adr1 do not matter, I am using them as status bits! 
+
+// TRS-MODE: REACTS TO MEM WRITES (SNOOPING) 
+// VS100-MODE: REACTS TO IO REQ (in + out) 
+// NATIVE-MODE: REACTS TO IO REQ (in + out) 
+
+// BYTE RECEIVED: 
+SPEECH_WRITE = TRS & !MEMWR # VS100 & !IOOUT # NATIVE & !IOOUT ; 
+
+// READ STATUS BIT / BYTE FROM AVR: ONLY FOR NATIVE AND VS100: 
+SPEECH_READ  =  VS100 & !IOIN # NATIVE & !IOIN ;  
+
+
+
