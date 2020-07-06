@@ -699,7 +699,7 @@ It contains the following:
 
 #### Final Model 3 / 4 PCB Version 
 
-![Final Talker/80 Model 3 / 4 Board - 1](images/DSC00086.JPG) 
+![Final Talker/80 Model 3 / 4 Board - 1](images/DSC00086.jpg) 
 
 
 ### Some YouTube Videos of Talker/80 in Action
