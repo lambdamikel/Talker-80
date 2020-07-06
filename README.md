@@ -72,9 +72,7 @@ Talker/80 offers:
 
   1. **DECtalk-Based Text-to-Speech (TTS) Synthesis:** the **Epson S1V30120 TTS** chip on the utilized mikroBUS "TextToSpeech Click!" daughterboard from MikroElektronika implements DECtalk v5 - a natural sounding speech synthesizer for English and Spanish, with different voices. DECtalk can even sing. The **DECtalk mode** is very powerful and versatile, but the DECtalk control language can be difficult to program. Hence, a simplified control language for the S1V30120 is offered as well, the so-called **Epson mode**. DECtalk mode is used to implement **emulations of two classic TRS-80 Voice Synthesizers**: the official TRS Voice Synthesizer from Tandy Radio Shack (Model 1 only), and the VS-100 Voice Synthesizer from Alpha Products (Model 1, 3, and 4). Both use the **Votrax SC-01** as their underlying speech chip. Talker/80 emulates the SC-01 by means of DECtalk here. The DECtalk and Epson modes produce superior speech quality, and text-to-speech is performed by Talker/80 itself, i.e., no breaking down into phonemes is required. Text to be spoken can be sent directly to IO port 11, and the status of the speech synthesizer is checked by reading from port 11. 
 
-  2. **TRS Voice Synthesizer Emulation - MODEL 1 VERSION ONLY**: the emulation in terms of DECtalk as just described is good enough to produce understandable speech, but it sounds different than the Votrax SC-01 chip. Original software such as the TRS Voice Synthesizer BASIC Demo Program, and "Talking Eliza" work out of the box, but note that the emulation is only 80% faithful or so. Also, original software written for the TRS Voice Synthesizer will only work on Talker/80 for the Model 1. The Model 3 / 4 version offers a workaround (see below), but requires manual software conversion. 
-
-A main difference between the DECtalk-based emulation and the original synthesizers is that it is not possible to utter phonemes "in realtime", as DECtalk requires phoneme buffering and processing before they can be spoken, unlike the SC-01, which is able to utter a phoneme immediatly (they can, for example, be used as "realtime sound effects"). This is exploited, for example, in the TRS Voice Synthesizer BASIC Demo Program, which spells out individual phonemes in real time ("the phonemes in the word zero are: z e r o" etc.) Due to the buffering requirement for DECtalk, this is challenging to get right. Please check out my demo videos below to see if you can live with the result. 
+  2. **TRS Voice Synthesizer Emulation - MODEL 1 VERSION ONLY**: the emulation in terms of DECtalk as just described is good enough to produce understandable speech, but it sounds different than the Votrax SC-01 chip. Original software such as the TRS Voice Synthesizer BASIC Demo Program, and "Talking Eliza" work out of the box, but note that the emulation is only 80% faithful or so. Also, original software written for the TRS Voice Synthesizer will only work on Talker/80 for the Model 1. The Model 3 / 4 version offers a workaround (see below), but requires manual software conversion.  
 
  3. **VS-100 Voice Synthesizer from Alpha Products Emulation**: another classic TRS-80 voice synthesizer. Also used the Votrax SC-01, but was / is not compatible with the TRS Voice Synthesizer. Talker/80 uses the same method of emulation (mapping to DECtalk phonemes). Same comments wrt. buffering etc. apply. Original software works without patches (e.g., VS48 and VS-100DEMO.BAS etc.). In addition, **pitch control is currently no supported**, so the speech will be monotonous. 
 
@@ -91,10 +89,13 @@ A main difference between the DECtalk-based emulation and the original synthesiz
  9. **Three LEDs**: These LEDs are used for mode indiciation, to signal data being received, to indicate when Talker/80 is speaking, and when a single phoneme is being uttered. LEDs will also indicate errors. 
 
 
+A main difference between the DECtalk-based emulation and the original synthesizers is that it is not possible to utter phonemes "in realtime", as DECtalk requires phoneme buffering and processing before they can be spoken, unlike the SC-01, which is able to utter a phoneme immediatly (they can, for example, be used as "realtime sound effects"). This is exploited, for example, in the TRS Voice Synthesizer BASIC Demo Program, which spells out individual phonemes in real time ("the phonemes in the word zero are: z e r o" etc.) Due to the buffering requirement for DECtalk, this is challenging to get right. Please check out my demo videos below to see if you can live with the result. 
+
+
 ## TRS-80 Model 1 Connection & Startup Sequence 
 
-![Board](images/explanation.jpg)
-![Board Backside](images/explanation-back.jpg)
+![Model 1 Board](images/explanation.jpg)
+![Model 1 Board Backside](images/explanation-back.jpg)
 
 Talker/80 gets its power from a standard, voltage stabilized **5V power supply** ("Wall Wart") with **positive center polarity**, **5.5 mm x 2.5mm**.  It connects to the Talker/80 Barrel Jack.  
 
@@ -113,6 +114,9 @@ Same as for Model 1, but use the 50pin ribbon cable. The Talker/80
 passthrough connector can be connected to the FreHD HD emulator, an
 Orchestra-90, or likewise. It is very important that your equipment is
 powered on in the right order of sequence. First power on the expansions (Talker/80, FreHD, ...), and then the Model 3 / Model 4. 
+
+![Model 3 / 4 Board](images/DSC00086.jpg)
+![Model 3 / 4 Board Backside](images/DSC00089.jpg)
 
 ## Hardware Description
 
@@ -485,29 +489,37 @@ The LEDs have the following meaning - during startup and after mode selection, t
 
 
 #### Model 1 Version
+
 ![Schematics](schematics/m1/schematics.jpg) 
 [Click here for a PDF version of the schematics of the Model 1 version.](schematics/m1/schematics.pdf) 
+
 
 #### Model 3 / 4 Version
 ![Schematics](schematics/m3m4/schematics.jpg) 
 [Click here for a PDF version of the schematics of the Model 3 / 4 version.](schematics/m3m4/schematics.pdf) 
+
 
 ### PCB Gerbers 
 
 ![PCB](images/pcb.jpg) 
 ![KiCAD 3D Model](images/3d.jpg)
 
+#### Model 1 Version
+
 [Gerbers of the Model 1 version can be found here.](gerbers/m1/talker80-v3.zip) 
 
 A version is also hosted on [OshPark for immediate ordering of PCBs.](https://oshpark.com/shared_projects/RE78tFPR) And [another one on Seeed.](https://www.seeedstudio.com/Talker-80-Voice-Synthesizer-for-the-TRS-80-Model-1-g-1282942)
 
-### Bill of Material 
+Bill of Material:
 
-#### Model 1 Version BOM 
 ![BOM](schematics/m1/BOM.jpg) 
 
-#### Model 3 / 4 Version BOM 
+#### Model 3 / 4 Version
+
+[Gerbers of the Model 3 / 4 version can be found here.](gerbers/m3m4/talker80-m3m4.zip) 
+
 ![BOM](schematics/m3m4/BOM.jpg) 
+
 
 #### Tipps 
 I recommend the use of standard stackable Arduino Headers for J1 and J2 (instead of soldering the daughter board in permanently). For the amplifier board, J6 and J7 are simple pin headers that make the connection to the amplifier board: 
