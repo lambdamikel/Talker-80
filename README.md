@@ -655,11 +655,18 @@ It contains the following:
 
 There are a number of demo programs.
 
-The main disk is called [`talker80.hfe`](trs80/m3m4/images/talker80.hfe)
-(or [`talker80.jv3`](trs80/m1/images/talker80.jve)). The disk loads with
-Model 3 LDOS 3.5.1. 
+The main disk is called
+[`talker80.hfe`](trs80/m3m4/images/talker80.hfe) (or
+[`talker80.jv3`](trs80/m1/images/talker80.jve)). The disk loads with
+Model 3 LDOS 3.5.1. Note that each BASIC (`BAS`) program is also
+included as a non-tokenized, `TXT` file. This is to facilitate loading
+of the programs into another BASIC, e.g., Microsoft BASIC which was
+the default BASIC for TRSDOS / LDOS 6.3.1. Some work might be required
+to get the programs to run with Microsoft BASIC. Also, the VS-100
+software only seems to work with LDOS 3.5.1 (Model 3 mode). 
 
-It contains the following: 
+So, the DSK contains the following (no listing the `TXT` versions
+of the BASIC programs): 
 
 ----------------------------------------------------------------
 | Program      | Description                                   |
