@@ -122,7 +122,7 @@ powered on in the right order of sequence. First power on the expansions (Talker
 
 Talker/80 uses an ATmega 644-20 (U4) clocked at 20 MHz (or 16 MHz) as its microcontroller. The firmware has ~ 45 KBs. The firmware was programmed in C, using the WinAVR / GCC toolchain. At startup, the ATmega loads the Epson firmware image (implementing DECtalk) over SPI into the speech daughterboard. At runtime, SPI is used as well. External interupts are being used to register read and write requests. The address decoding is done by a GAL20V10 (U1), and another GAL20V10 (U2) is acting as a tristate databus latch and also provides status input (bits 6 and 7) to the TRS-80 in all modes other than the TRS Voice Synthesizer emulation mode. U5 is the op-amp.  The programming / firmware of the address decoder GAL U1 used for the Model 3 / 4 version differs from the Model 1 version. All other chips (and their programming) are identical. 
 
-The current mode of Talker/80 is being signaled to the address decoder GAL U2, using 2 bits for the 4 different modes. Depending on the mode, the GAL U2 eiher decodes IO requests (using IN and OUT signals), or video RAM addresses (and signals RD and WR) to implement "video RAM snooping" (a form of memory-based IO) as required for the TRS Voice Synthesizer. The details can be found in the GAL code here. This only works on the Model 1, and the Model 3 / 4 does not support memory-based IO. 
+The current mode of Talker/80 is being signaled to the address decoder GAL U2, using 2 bits for the 4 different modes. Depending on the mode, the GAL U2 eiher decodes IO requests (using IN and OUT signals), or video RAM addresses (and signals RD and WR) to implement "video RAM snooping" (a form of memory-based IO) as required for the TRS Voice Synthesizer. The details can be found in the GAL code. This only works on the Model 1, since the Model 3 / 4 doesn't support memory-based IO. 
 
 Applications can read from IO port 11 to find out if Talker/80 is actively speaking. Note that input to Talker/80 is always buffered, so realtime control of the speaking process (e.g., "voice synthesizer sound effects") is not achievable. As usual, the ``EXTIOSEL`` signal is being used on the Model 3 / 4 to signal an IO read request from port 11. 
 
@@ -130,22 +130,22 @@ Applications can read from IO port 11 to find out if Talker/80 is actively speak
 
 Talker/80 **listens to port 11**. For the text content, 7 bit ASCII is being used. The text-to-speech conversion is performed internally, so no phoneme encoding on the TRS-80 side is  required. Input from IO port 11 is being buffered. The buffer has a size of 256 bytes. A **return  (CR / ASCII code 13)** initiates the text to speech process, and Talker/80 starts to speak (if the buffer had content). While it speaks, bits 6 and 7 of port 11 will be low - use ``inp(11) AND 192`` to check for bits 6 and 7 being set in BASIC. **Note that the status of the other bits will be undefined, especially on the Model 3 / 4.** 
 
-ASCII characters being sent to port 11 which have its 8th bit set (i.e., bytes > 127) are being interpreted as **control bytes**. Control bytes are used to control the Talker/80, i.e., to change its current mode, to change parameters of the speech (voice, speak rate, volume), etc. The list of control bytes is given below. For example, to reset Talker/80, send 255 to IO port 11 (use ``out 11,255`` in BASIC).    
+ASCII characters being sent to port 11 which have its 8th bit (Bit 7) set (i.e., bytes > 127) are being interpreted as **control bytes**. Control bytes are used to control the Talker/80, i.e., to change its current mode, to change parameters of the speech (voice, speak rate, volume), etc. The list of control bytes is given below. For example, to reset Talker/80, send 255 to IO port 11 (use ``out 11,255`` in BASIC).    
 
 Speech can be **blocking or non-blocking**. In the blocking mode, the Z80 CPU is suspended by pulling its ``WAIT`` input low. 
 
 ### Address Decoding in the VS-100 Mode 
 
-The primary IO port the VS-100 is also port 11. And like in the Epson and DECtalk modes, one can read the status from port 11. Bits 6 and 7 indicate if it is busy speaking. 
+The primary IO port the VS-100 is also port 11. And like in the Epson and DECtalk modes, one can read the status from port 11. Bits 6 and 7 (the byte starts with Bit 0) indicate if it is busy speaking. 
 
-*For the Model 1 version, lazy / partial address decoding is being used,* like in the original (partial address decoding was used to reduce decoder complexity and hence chip count). According to information from members of the Vintage Computer Forum, the following IO ports can also be used to address the VS-100  ("it responds if bits 7, 5, 4 and 2 are 0, don't care for others"):
+*For the Model 1 version, lazy / partial address decoding is being used,* just like in the original VS-100. Partial address decoding was used to reduce the address decoder complexity and hence chip count and costs. According to information from members of the Vintage Computer Forum, the following IO ports can also be used to address the VS-100  ("it responds if bits 7, 5, 4 and 2 are 0, don't care for others"):
 
 - 0, 1, 2, 3
 - 8, 9, 10, **11** 
 - 64, 65, 66, 67
 - 72, 73, 74, 75
 
-However, since the VS-100 software only seems to address the VS-100 hardware using port 11, in order to reduce the possibility of address conflict with other hardware extensions, the *Model 3 / 4 version does full address decoding*, so Talker/80 the Model 3 / 4 version of Talker/80 only listens to port 11. 
+However, since the VS-100 software only seems to address the VS-100 hardware using port 11, and to reduce the possibility of address conflicts with other hardware extensions, the *Model 3 / 4 version of Talker/80 does full address decoding* and consequently **only** listens to port 11. 
 
 Unlike the DECtalk and EPSON modes, text to speech / encoding of text into phonemes has to be performed on the TRS-80 side. SC-01 phonemes are being sent, not ASCII text characters. 
 
@@ -165,9 +165,9 @@ Here is a picture of the **original VS-100 Voice Synthesizer:**
 ### Address Decoding in the TRS Voice Synthesizer Mode
 
 The TRS Voice Synthesizer uses memory-based IO. 
-It snoops write to the video RAM in the address range ``$3FE0 .. $3FFF``. Only the temporal order of writes matters, not the actual address from that range.  Hence, in this mode, any write (WR signal) in that address range will put a byte in the buffer. 
+It snoops writes to the video RAM in the address range ``$3FE0 .. $3FFF``. Only the temporal order of writes matters, not the actual address from that range.  Hence, in this mode, any write (WR signal) in that address range will put a byte in the Talker/80 speech buffer.  
 
-A special protocol is being used. Even though the TRS Voice Synthesizer uses the same speech chip as the VS-100, the SC-01, it is not using the SC-01 phonemes directly. Rather, Tandy Radio Shack invented a "printed" phoneme character set for some of the SC-01 phonemes. A special character, the "?" opens and closes the "window" to the Voice Synthesizer. 
+A special protocol is being used. Even though the TRS Voice Synthesizer employs the same speech chip as the VS-100, the SC-01, it is not using the SC-01 phonemes directly. Rather, Tandy Radio Shack invented a "printed" phoneme character set for some of the SC-01 phonemes. A special character, the "?" opens and closes the "window" to the Voice Synthesizer. 
 
 The TRS Voice Synthesizer's printed ASCII phonemes for some of the SC-01 phonemes are the following: 
 
@@ -175,7 +175,7 @@ The TRS Voice Synthesizer's printed ASCII phonemes for some of the SC-01 phoneme
 
 Note that, like in the VS-100, control bytes are not accepted in this mode, as normal "to screen" printing  might otherwise trigger them. If a different voice setting is required in the TRS Voice Synthesizer mode (e.g., a different voice, speech rate or volume), then the setting must be changed from the EPSON or DECtalk mode first, and then the TRS Voice Synthesizer mode be entered using the control bytes `&ED` or `&EC`. The changed voice synthesizer settings will carry over to the new mode, and be active from now on. The TRS Voice Synthesizer mode can only be exited via the RESET button (since no control bytes are accepted). 
 
-*On the Model 3 / 4, the TRS Voice Synthesizer mode can be enabled, but the TRS Voice Synthesizer software will not work properly, due to the impossibility of memory-mapped IO on the Model 3 / 4. However, the TRS Voice Synthesizer can be addressed and will be working properly if the printed ASCII phonemes are being sent to IO port 11 instead. Hence, software can be ported by replacing the ``print@"<X>`` (where ``<X>`` is a TRS Voice Synthesizer phoneme) statements with ``out 11,asc(<X>)`` statements.* 
+*On the Model 3 / 4, the TRS Voice Synthesizer mode can be enabled, but the TRS Voice Synthesizer software will not work properly, due to the impossibility of memory-mapped IO on the Model 3 / 4. However, the TRS Voice Synthesizer emulation can be addressed via IO port 11 and will be working properly if the printed ASCII phonemes are being sent to this port, rather than printed on the screen. Hence, TRS Voice Synthesizer software can be ported by replacing the ``print@"<X>`` (where ``<X>`` is a TRS Voice Synthesizer phoneme) statements with proper ``out 11,asc(<X>)`` statements. Again, this is only necessary for the Model 3 / Model 4 version of Talker/80.* 
 
 Here is a picture of the **original TRS Voice Synthesizer:** 
 
@@ -526,7 +526,7 @@ I recommend the use of standard stackable Arduino Headers for J1 and J2 (instead
 
 ![Amplifier](images/amp.jpg) 
 
-The form factors in the above BOM are **for illustration only.** Instead of ceramic disc capacitors, I have used ceramic multilayer capacitors mostly. I recommend using DIP sockets for all chips.The values for the pots / trimmers are 503, 503, and 201 (speaker volume). 
+The form factors in the above BOM are **for illustration only.** Instead of ceramic disc capacitors, I have used ceramic multilayer capacitors mostly. I recommend using DIP sockets for all chips. The values for the pots / trimmers are 503, 503, and 201 (speaker volume). 
 
 
 ## Talker/80 Control Bytes 
@@ -659,14 +659,14 @@ The main disk is called
 [`talker80.hfe`](trs80/m3m4/images/talker80.hfe) (or
 [`talker80.jv3`](trs80/m1/images/talker80.jve)). The disk loads with
 Model 3 LDOS 3.5.1. Note that each BASIC (`BAS`) program is also
-included as a non-tokenized, `TXT` file. This is to facilitate loading
-of the programs into another BASIC, e.g., Microsoft BASIC which was
-the default BASIC for TRSDOS / LDOS 6.3.1. Some work might be required
-to get the programs to run with Microsoft BASIC. Also, the VS-100
-software only seems to work with LDOS 3.5.1 (Model 3 mode). 
+included as a non-tokenized `TXT` file, to facilitate loading into
+another BASIC, e.g., Microsoft BASIC. Microsoft BASIC was the default
+TRSDOS / LDOS 6.3.1. Some work might be required to get the programs
+to run with Microsoft BASIC (e.g, ELIZA80). Also, the VS-100 software
+only seems to work with LDOS 3.5.1 (Model 3 mode). 
 
-So, the DSK contains the following (no listing the `TXT` versions
-of the BASIC programs): 
+So, the DSK contains the following (plus the `TXT` versions of the
+BASIC programs):
 
 ----------------------------------------------------------------
 | Program      | Description                                   |
