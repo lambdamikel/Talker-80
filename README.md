@@ -51,6 +51,8 @@
 
 ![Production](images/batch.jpg)
 
+- 7/11/2020: 12 Talker/80 Model 1 have been sold! 
+
 ## Important License Information
 
 Talker/80 uses GPL 3. This code uses the [Epson S1V30120 firmware image]( https://github.com/MikroElektronika/Click_TextToSpeech_S1V30120/blob/master/library/include/text_to_speech_img.h)
