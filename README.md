@@ -54,7 +54,7 @@
 - 7/11/2020: 12 Talker/80 Model 1 have been sold! 
 - 7/21/2020: The first batch of 3 Talker/80 for the Model 3 / 4 have been sold. 
 
-![Talker/80 for M3/M4 c)](images/talker80-m3m4-first-batch.JPG)
+![Talker/80 for M3/M4 c)](images/talker80-m3m4-first-batch.jpg)
 
 
 ## Important License Information
