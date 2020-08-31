@@ -5,7 +5,14 @@
 
 ![TRS-80 Model 1 with Talker/80](images/DSC09771.JPG)
 
-## News 
+## Latest News 
+
+ - 8/31/2020: A 3d printed case for the Model 1 Talker/80: **Logan**, the 14 year old son of [Vintage Computer Forum user 
+form Avia](http://www.vcfed.org/forum/member.php?37029-Avia) has designed a great looking set of clothes for Talker/80! Great work, Logan! 
+
+![Logan's 3d Printed Talker/80 Case](images/Talker80sm.jpg)
+
+## Older News 
 
  - 5/5/2020: Talker/80 for the Model 1 is available!
  - 5/6/2020: The first three Talker/80's have been sold! 
