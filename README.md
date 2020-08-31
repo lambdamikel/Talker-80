@@ -7,7 +7,7 @@
 
 ## Latest News 
 
- - 8/31/2020: A 3d printed case for the Model 1 Talker/80: **Logan**, the 14 year old son of [Vintage Computer Forum user Avia](http://www.vcfed.org/forum/member.php?37029-Avia) has designed a great looking set of clothes for Talker/80! Great work, Logan! 
+ - 8/31/2020: **Logan**, the 14 year old son of [Vintage Computer Forum user Avia](http://www.vcfed.org/forum/member.php?37029-Avia) has designed a great looking set of clothes for Talker/80 - a 3d printed case for the Model 1 version! Great work, Logan! 
 
 ![Logan's 3d Printed Talker/80 Case](images/Talker80sm.jpg)
 
