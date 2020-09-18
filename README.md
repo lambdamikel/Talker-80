@@ -7,10 +7,10 @@
 
 ## Latest News 
 
- - 8/31/2020: **Logan**, the 14 year old son of [Vintage Computer Forum user Avia](http://www.vcfed.org/forum/member.php?37029-Avia), has designed a great looking set of clothes for Talker/80 - a 3d printed case for the Model 1 version! Great work, Logan! 
+- 9/17/2020: Beware of FAKE COUNTERFEIT GALs on eBay - just bought a bunch of GAL22V10B's. They are counterfeits. Even the Lattice logo looks fake. Both my programmers (a Genius G540 and a TL866CS) fails to verify after programming. 
 
-![Logan's 3d Printed Talker/80 Case](images/Talker80sm.jpg)
-![Logan's 3d Printed Talker/80 Case with Setup](images/Talker802.jpg)
+![FAKE GALs](images/FAKE-GALs.jpg)
+
 
 ## Older News 
 
@@ -62,6 +62,11 @@
 - 7/21/2020: The first batch of Talker/80 for the Model 3 / 4 has been sold. 
 
 ![Talker/80 for M3/M4 c)](images/talker80-m3m4-first-batch.jpg)
+
+- 8/31/2020: **Logan**, the 14 year old son of [Vintage Computer Forum user Avia](http://www.vcfed.org/forum/member.php?37029-Avia), has designed a great looking set of clothes for Talker/80 - a 3d printed case for the Model 1 version! Great work, Logan! 
+
+![Logan's 3d Printed Talker/80 Case](images/Talker80sm.jpg)
+![Logan's 3d Printed Talker/80 Case with Setup](images/Talker802.jpg)
 
 
 ## Important License Information
