@@ -7,7 +7,7 @@
 
 ## Latest News 
 
-- 9/17/2020: Beware of FAKE COUNTERFEIT GALs on eBay - just bought a bunch of GAL22V10B's. They are counterfeits - the 22V10D in the picture is real, the 22V10B's are fake. Even the Lattice logo looks fake. Both my programmers (a Genius G540 and a TL866CS) fails to verify after programming. 
+- 9/17/2020: Beware of FAKE COUNTERFEIT GALs on eBay - just bought a bunch of GAL22V10Bs. They are counterfeits - the 22V10D in the picture is real, the 22V10Bs are fake. Even the Lattice logo looks fake. Both my programmers (a Genius G540 and a TL866CS) fails to verify after programming. 
 
 ![FAKE GALs](images/FAKE-GALs.jpg)
 
