@@ -10,7 +10,7 @@
 Last minute \#SepTandy entry - Talker/80 Model III / Model 4 DIY kit assembly tutorial video: 
 
 ![SepTandy Talker/80](images/septandy2020.jpg)
-[SepTandy Talker/80](https://youtu.be/yHVgSqcxh_4https://youtu.be/NUp0_M16cys?list=PLvdXKcHrGqhcJzzogLMI-J4Or-ap6UVSY)
+[SepTandy Talker/80](https://youtu.be/yHVgSqcxh_4)
 
 ## Older News 
 
