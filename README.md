@@ -7,10 +7,10 @@
 
 ## Latest News 
 
-- 9/17/2020: Beware of FAKE COUNTERFEIT GALs on eBay - just bought a bunch of GAL22V10Bs. They are counterfeits - the 22V10D in the picture is real, the 22V10Bs are fake. Even the Lattice logo looks fake. Both my programmers (a Genius G540 and a TL866CS) fails to verify after programming. 
+Last minute \#SepTandy entry - Talker/80 Model III / Model 4 DIY kit assembly tutorial video: 
 
-![FAKE GALs](images/FAKE-GALs.jpg)
-
+![SepTandy Talker/80](images/septandy2020.jpg)
+[SepTandy Talker/80](https://youtu.be/yHVgSqcxh_4https://youtu.be/NUp0_M16cys?list=PLvdXKcHrGqhcJzzogLMI-J4Or-ap6UVSY)
 
 ## Older News 
 
@@ -68,6 +68,9 @@
 ![Logan's 3d Printed Talker/80 Case](images/Talker80sm.jpg)
 ![Logan's 3d Printed Talker/80 Case with Setup](images/Talker802.jpg)
 
+- 9/17/2020: Beware of FAKE COUNTERFEIT GALs on eBay - just bought a bunch of GAL22V10Bs. They are counterfeits - the 22V10D in the picture is real, the 22V10Bs are fake. Even the Lattice logo looks fake. Both my programmers (a Genius G540 and a TL866CS) fails to verify after programming. 
+
+![FAKE GALs](images/FAKE-GALs.jpg)
 
 ## Important License Information
 
