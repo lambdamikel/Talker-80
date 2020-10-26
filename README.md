@@ -7,7 +7,7 @@
 
 ## Latest News 
 
-I gave a talk about Talker/80 on [TrashTalk Life #8.] (https://www.youtube.com/watch?v=RuG18eV8Azo) 
+I gave a talk about Talker/80 on [TrashTalk Life #8](https://www.youtube.com/watch?v=RuG18eV8Azo) 
 Here is [PDF of the presentation.](manuals/Talker80-TrashTalk-10-24-2020-Wessel.pdf)
 
 ## Older News 
