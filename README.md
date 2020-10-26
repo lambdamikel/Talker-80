@@ -7,7 +7,8 @@
 
 ## Latest News 
 
-I gave a talk about Talker/80 on [TrashTalk Life #8: "The INPs and OUTs of Talker/80, A Modern Voice Synthesizer for the TRS-80](https://www.youtube.com/watch?v=RuG18eV8Azo) 
+- 10/24/2020: I gave a talk about Talker/80 on [TrashTalk Life #8: "The INPs and OUTs of Talker/80, A Modern Voice Synthesizer for the TRS-80](https://www.youtube.com/watch?v=RuG18eV8Azo). Thanks to Pete Cetinski and Arno Puder for inviting me! 
+
 Here is [PDF of the presentation.](manuals/Talker80-TrashTalk-10-24-2020-Wessel.pdf)
 
 ## Older News 
