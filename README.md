@@ -7,10 +7,8 @@
 
 ## Latest News 
 
-Last minute \#SepTandy entry - Talker/80 Model III / Model 4 DIY kit assembly tutorial video: 
-
-![SepTandy Talker/80](images/septandy2020.jpg)
-[SepTandy Talker/80](https://youtu.be/yHVgSqcxh_4)
+I gave a talk about Talker/80 on [TrashTalk Life #8.] (https://www.youtube.com/watch?v=RuG18eV8Azo) 
+Here is [PDF of the presentation.](manuals/Talker80-TrashTalk-10-24-2020-Wessel.pdf)
 
 ## Older News 
 
@@ -71,6 +69,10 @@ Last minute \#SepTandy entry - Talker/80 Model III / Model 4 DIY kit assembly tu
 - 9/17/2020: Beware of FAKE COUNTERFEIT GALs on eBay - just bought a bunch of GAL22V10Bs. They are counterfeits - the 22V10D in the picture is real, the 22V10Bs are fake. Even the Lattice logo looks fake. Both my programmers (a Genius G540 and a TL866CS) fails to verify after programming. 
 
 ![FAKE GALs](images/FAKE-GALs.jpg)
+
+- 9/30/2020: Last minute \#SepTandy entry - Talker/80 Model III / Model 4 DIY kit assembly tutorial video: 
+![SepTandy Talker/80](images/septandy2020.jpg)
+[SepTandy Talker/80](https://youtu.be/yHVgSqcxh_4)
 
 ## Important License Information
 
