@@ -9,7 +9,7 @@
 
 - 7/12/2020: Talker/80 is a winner - of the **2020 TRS-80 Double-Do Competition**! Check out the [December 2020 issue](http://www.fabsitesuk.com/tandy/trs8bit1404.pdf) of [Dusty's fabulous fanzine](http://trs-80.org.uk/). As always, **TRS8BIT** is a great read and I am always looking forward to the next issue. Many thanks to Dusty and the Competition Committee for this great recognition and price.
 
-![Talker/80 is a winner](images/talker80-won-competition.jpg( 
+![Talker/80 is a winner](images/talker80-won-competition.jpg)
 
 ## Older News 
 
