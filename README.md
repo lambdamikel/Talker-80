@@ -7,7 +7,9 @@
 
 ## Latest News 
 
-- 10/24/2020: I gave a talk about Talker/80 on [TrashTalk Live #8: The INPs and OUTs of Talker/80, A Modern Voice Synthesizer for the TRS-80.](https://youtu.be/BbYI-fFmfQQ) Thanks to Pete Cetinski and Arno Puder for inviting me; here is the [PDF of the presentation.](manuals/Talker80-TrashTalk-10-24-2020-Wessel.pdf)
+- 7/12/2020: Talker/80 is a winner - of the **2020 TRS-80 Double-Do Competition**! Check out the [December 2020 issue](http://www.fabsitesuk.com/tandy/trs8bit1404.pdf) of [Dusty's fabulous fanzine](http://trs-80.org.uk/). As always, **TRS8BIT** is a great read and I am always looking forward to the next issue. Many thanks to Dusty and the Competition Committee for this great recognition and price.
+
+![Talker/80 is a winner](images/talker80-won-competition.jpg( 
 
 ## Older News 
 
@@ -72,6 +74,8 @@
 - 9/30/2020: Last minute \#SepTandy entry - Talker/80 Model III / Model 4 DIY kit assembly tutorial video: 
 ![SepTandy Talker/80](images/septandy2020.jpg)
 [SepTandy Talker/80](https://youtu.be/yHVgSqcxh_4)
+
+- 10/24/2020: I gave a talk about Talker/80 on [TrashTalk Live #8: The INPs and OUTs of Talker/80, A Modern Voice Synthesizer for the TRS-80.](https://youtu.be/BbYI-fFmfQQ) Thanks to Pete Cetinski and Arno Puder for inviting me; here is the [PDF of the presentation.](manuals/Talker80-TrashTalk-10-24-2020-Wessel.pdf)
 
 ## Important License Information
 
