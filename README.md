@@ -12,7 +12,7 @@
 
 ![Talker/80 is a winner](images/talker80-won-competition.jpg)
 
-- 11/12/2020: Schwätzer/80 on ebay.de - check it out! Good to hear that automatic language translation has reached a pinnacle of accuracy! Thanks, eBay, that's a seller in Germany for sure (I hope I am not paying for that auto-mutilation service...) 
+- 11/12/2020: **Schwätzer/80** on ebay.de - check it out! Good to hear that automatic language translation has reached a pinnacle of accuracy! Thanks, eBay, that's a seller in Germany for sure (I hope I am not paying for that auto-language mutilation service...) 
 
 ![Schwätzer/80 on eBay.de](images/schwätzer80-ebay.jpg)
 
