@@ -7,14 +7,14 @@
 
 ## Latest News 
 
+- 10/7/2021: Talker/80 in Germany! Great video by ["The Homecomputerguy"](https://homecomputerguy.de/) who took his Talker/80 to the ["Classic Computing 2021"](https://www.classic-computing.org/cc2021/) fair in Vöhringen! Thanks for the [great video](https://youtu.be/QB91IUFZ_X8) and for demoing Talker/80!
+
+![Ruebesoft Talker/80](images/ruebesoft.PNG)
 
 - 7/12/2020: Talker/80 is a winner - of the **2020 TRS-80 Double-Do Competition**! Check out the [December 2020 issue](http://www.fabsitesuk.com/tandy/trs8bit1404.pdf) of [Dusty's fabulous fanzine](http://trs-80.org.uk/). As always, **TRS8BIT** is a great read and I am always looking forward to the next issue. Many thanks to Dusty and the Competition Committee for this great recognition and price.
 
 ![Talker/80 is a winner](images/talker80-won-competition.jpg)
 
-- 11/12/2020: **Schwätzer/80** on ebay.de - check it out! Good to hear that automatic language translation has reached a pinnacle of accuracy! Thanks, eBay, that's a seller in Germany for sure (I hope I am not paying for that auto-language mutilation service...) 
-
-![Schwätzer/80 on eBay.de](images/schwätzer80-ebay.jpg)
 
 
 ## Older News 
@@ -84,6 +84,10 @@
 - 10/24/2020: I gave a talk about Talker/80 on [TrashTalk Live #8: The INPs and OUTs of Talker/80, A Modern Voice Synthesizer for the TRS-80.](https://youtu.be/BbYI-fFmfQQ) Thanks to Pete Cetinski and Arno Puder for inviting me; here is the [PDF of the presentation.](manuals/Talker80-TrashTalk-10-24-2020-Wessel.pdf)
 
 ![Trash Talke Live No.8](images/trashtalk-live.jpg)
+
+- 11/12/2020: **Schwätzer/80** on ebay.de - check it out! Good to hear that automatic language translation has reached a pinnacle of accuracy! Thanks, eBay, that's a seller in Germany for sure (I hope I am not paying for that auto-language mutilation service...) 
+
+![Schwätzer/80 on eBay.de](images/schwätzer80-ebay.jpg)
 
 ## Important License Information
 
