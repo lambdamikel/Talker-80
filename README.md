@@ -7,7 +7,7 @@
 
 ## Latest News 
 
-- 10/7/2021: Talker/80 in Germany! Great video by ["The Homecomputerguy"](https://homecomputerguy.de/) who took his Talker/80 to the ["Classic Computing 2021"](https://www.classic-computing.org/cc2021/) fair in Vˆhringen! Thanks for the [great video](https://youtu.be/QB91IUFZ_X8) and for demoing Talker/80!
+- 10/7/2021: Talker/80 in Germany! Great video by ["The Homecomputerguy"](https://homecomputerguy.de/) who took his Talker/80 to the ["Classic Computing 2021"](https://www.classic-computing.org/cc2021/) fair in V√∂hringen! Thanks for the [great video](https://youtu.be/QB91IUFZ_X8) and for demoing Talker/80!
 
 ![Ruebesoft Talker/80](images/ruebesoft.PNG)
 
@@ -85,9 +85,9 @@
 
 ![Trash Talke Live No.8](images/trashtalk-live.jpg)
 
-- 11/12/2020: **Schw‰tzer/80** on ebay.de - check it out! Good to hear that automatic language translation has reached a pinnacle of accuracy! Thanks, eBay, that's a seller in Germany for sure (I hope I am not paying for that auto-language mutilation service...) 
+- 11/12/2020: **Schw√§tzer/80** on ebay.de - check it out! Good to hear that automatic language translation has reached a pinnacle of accuracy! Thanks, eBay, that's a seller in Germany for sure (I hope I am not paying for that auto-language mutilation service...) 
 
-![Schw‰tzer/80 on eBay.de](images/schw‰tzer80-ebay.jpg)
+![Schw√§tzer/80 on eBay.de](images/schw√§tzer80-ebay.jpg)
 
 ## Important License Information
 
@@ -505,7 +505,7 @@ Talker/80 implements the following mapping from SC-01 phonemes to DECtalk phonem
 
 ### The Talker/80 Printed Circuit Board (PCB) 
 
-Talker/80 was made with [KiCad EDA v4.0.7](http://kicad-pcb.org/),
+Talker/80 was made with [KiCad EDA v4.0.7](http://kicad.org/),
 and "freeRouting.jar" did the routing.
 
 ![Switches and LEDs](images/switches-and-leds.jpg)
