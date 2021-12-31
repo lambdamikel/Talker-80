@@ -158,7 +158,7 @@ powered on in the right order of sequence. First power on the expansions (Talker
 
 ## Hardware Description
 
-Talker/80 uses an ATmega 644-20 (U4) clocked at 20 MHz (or 16 MHz) as its microcontroller. The firmware has ~ 45 KBs. The firmware was programmed in C, using the WinAVR / GCC toolchain. At startup, the ATmega loads the Epson firmware image (implementing DECtalk) over SPI into the speech daughterboard. At runtime, SPI is used as well. External interupts are being used to register read and write requests. The address decoding is done by a GAL20V10 (U1), and another GAL20V10 (U2) is acting as a tristate databus latch and also provides status input (bits 6 and 7) to the TRS-80 in all modes other than the TRS Voice Synthesizer emulation mode. U5 is the op-amp.  The programming / firmware of the address decoder GAL U1 used for the Model 3 / 4 version differs from the Model 1 version. All other chips (and their programming) are identical. 
+Talker/80 uses an ATmega 644-20 (U4) clocked at 16 MHz as its microcontroller. The firmware has ~ 45 KBs. The firmware was programmed in C, using the WinAVR / GCC toolchain. At startup, the ATmega loads the Epson firmware image (implementing DECtalk) over SPI into the speech daughterboard. At runtime, SPI is used as well. External interupts are being used to register read and write requests. The address decoding is done by a GAL20V10 (U1), and another GAL20V10 (U2) is acting as a tristate databus latch and also provides status input (bits 6 and 7) to the TRS-80 in all modes other than the TRS Voice Synthesizer emulation mode. U5 is the op-amp.  The programming / firmware of the address decoder GAL U1 used for the Model 3 / 4 version differs from the Model 1 version. All other chips (and their programming) are identical. 
 
 The current mode of Talker/80 is being signaled to the address decoder GAL U2, using 2 bits for the 4 different modes. Depending on the mode, the GAL U2 eiher decodes IO requests (using IN and OUT signals), or video RAM addresses (and signals RD and WR) to implement "video RAM snooping" (a form of memory-based IO) as required for the TRS Voice Synthesizer. The details can be found in the GAL code. This only works on the Model 1, since the Model 3 / 4 doesn't support memory-based IO. 
 
@@ -550,6 +550,8 @@ A version is also hosted on [OshPark for immediate ordering of PCBs.](https://os
 
 Bill of Material:
 
+**Please note that, different from the BOM given below, the default clock is now 16 Mhz instead of 20 MHz, so you will need a 16 MHz crystal. The `Makefile` allows setting of the clock frequency. The supplied default firmware `talker80-firmware.hex` runs at 16 Mhz now.**
+
 ![BOM](schematics/m1/BOM.jpg) 
 
 #### Model 3 / 4 Version
@@ -651,7 +653,7 @@ Have a look at the BASIC programs provided on the disk images (see below).
 ### Tipps 
 
 The ATmega can be programmed with an EPROM programmer such as the inexpensive USB TL866II which can be found on Ebay and/or Amazon for ~
-30 USD. The fuse settings required for Talker/80's 20 MHz (16 MHz) external clock are shown in the following picture:
+30 USD. The fuse settings required for Talker/80's 16 MHz external clock are shown in the following picture:
 
 ![Fuse Settings](images/atmega-flash-config.jpg)
 
