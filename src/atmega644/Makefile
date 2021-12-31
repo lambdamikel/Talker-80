@@ -6,8 +6,8 @@
 
 #MCU   = atmega328p
 MCU   = atmega644p
-F_CPU = 20000000UL
-#F_CPU = 16000000UL
+#F_CPU = 20000000UL
+F_CPU = 16000000UL
 #BAUD  = 9600UL
 
 ## A directory for common include files and the simple USART library.
