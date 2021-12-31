@@ -550,7 +550,7 @@ A version is also hosted on [OshPark for immediate ordering of PCBs.](https://os
 
 Bill of Material:
 
-**Please note that, different from the BOM given below, the default clock is now 16 Mhz instead of 20 MHz, so you will need a 16 MHz crystal. The `Makefile` allows setting of the clock frequency. The supplied default firmware `talker80-firmware.hex` runs at 16 Mhz now.**
+**Please note that, different from the BOM given below, the clock frequency is now 16 Mhz instead of 20 MHz. So you will need a 16 MHz crystal instead of the listed 20 MHz crystal. The `Makefile` allows specification of the clock frequency. The default firmware supplied here, `talker80-firmware.hex`, runs at 16 Mhz by now. If you have a 20 MHz crystal at hand, that should also work, but you will need to change the `Makefile` accordingly and recompile the firmware with WinAVR.**
 
 ![BOM](schematics/m1/BOM.jpg) 
 
