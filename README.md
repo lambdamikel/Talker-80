@@ -7,7 +7,9 @@
 
 ## Latest News 
 
-- 3/30/2022: [Talker/80 with PocketTRS!](https://youtu.be/__6tL8iR-zk) PocketTRS is a great Model III / 4 in your pocket! And it has a real expansion port - works with FreHD, and also with Talker/80. Great stuff, thanks for posting - not sure why the deep and slow voice (the default voice is actually quite a bit faster and higher in pitch), but hey, why not! :-) 
+- 3/30/2022: [Talker/80 with PocketTRS by John Dias!](https://youtu.be/__6tL8iR-zk) PocketTRS is a great Model III / 4 in your pocket! And it has a real expansion port - works with FreHD, and also with Talker/80. Great stuff, thanks for posting - not sure why the deep and slow voice (the default voice is actually quite a bit faster and higher in pitch), but hey, why not! :-) 
+
+![John Dias PocketTRS](images/pockettrs.png)
 
 - 10/7/2021: Talker/80 in Germany! Great video by ["The Homecomputerguy"](https://homecomputerguy.de/) who took his Talker/80 to the ["Classic Computing 2021"](https://www.classic-computing.org/cc2021/) fair in Vöhringen! Thanks for the [great video](https://youtu.be/QB91IUFZ_X8) and for demoing Talker/80!
 
