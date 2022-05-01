@@ -7,7 +7,7 @@
 
 ## Latest News 
 
-- 5/1/2022: [Talker/80 noise reduction quick hack:](https://youtu.be/PXlzUbNzO18) If you are using the speaker & build-in PAM amplifier, depending on your speaker, you might get quite a bit of hissing noise. There is an easy fix for that - just pull the Op amp! The op amp is only needed for line out. And line out and speaker are mutually exclusive anyways, as they require completely different mixing levels. So - Op amp is needed for line out only, else it is better to just pull it, and this will remove all the noise. All ICs are socketed, so this is easy to do. 
+- 5/1/2022: [Talker/80 noise reduction quick hack:](https://youtu.be/PXlzUbNzO18) If you are using the speaker & built-in PAM amplifier, depending on your speaker, you might get quite a bit of hissing noise. There is an easy fix for that - just pull the Op amp! The op amp is only needed for line out. And line out and speaker are mutually exclusive anyways, as they require completely different mixing levels. So - Op amp is needed for line out only, else it is better to just pull it, and this will remove all the noise. All ICs are socketed, so this is easy to do. 
 
 - 3/30/2022: [Talker/80 with PocketTRS by John Dias!](https://youtu.be/__6tL8iR-zk) PocketTRS is a great Model III / 4 in your pocket! And it has a real expansion port - works with FreHD, and also with Talker/80. Great stuff, thanks for posting - not sure why the deep and slow voice (the default voice is actually quite a bit faster and higher in pitch), but hey, why not :-) Thanks for posting, John Dias!  
 
