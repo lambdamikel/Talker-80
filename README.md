@@ -5,7 +5,14 @@
 
 ![TRS-80 Model 1 with Talker/80](images/DSC09771.JPG)
 
-## Latest News 
+## Latest News
+
+- 5/1/2022: TRS-80 enthusiast [Paul Metcalf (ptmetcalf3)](https://youtu.be/a-NU-CEUf08?t=1743) has refined and reworked Logan Green's Talker/80 case design from 2019, and shared his "remix" on Tinkercad. It consists of three files: [the main case](https://www.tinkercad.com/things/73WzdeTgU08),  [the lid](https://www.tinkercad.com/things/654B3UJCJeU), and [the speaker grille](https://www.tinkercad.com/things/grB9VmsCIGU). Very cool, thanks for sharing, Logan and Paul! Great work! 
+
+![Main Case](images/3d-1.png)
+![Lid](images/3d-2.png)
+![Speaker grille](images/3d-3.png)
+
 
 - 5/1/2022: [Talker/80 noise reduction quick hack:](https://youtu.be/PXlzUbNzO18) If you are using the speaker & built-in PAM amplifier, depending on your speaker, you might get quite a bit of hissing noise. There is an easy fix for that - just pull the op-amp! The op-amp is only needed for line out. And line out and speaker are mutually exclusive anyways, as they require completely different mixing levels. So - op-amp is needed for line out only, else it is better to just pull it, and this will remove all the noise. All ICs are socketed, so this is easy to do. 
 
