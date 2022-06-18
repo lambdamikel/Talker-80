@@ -7,6 +7,11 @@
 
 ## Latest News
 
+- 6/17/2022: Goodbye, Talker/80! The last batch of Talker/80's for the Model 1 has been produced, and it sold within 1 week! Now they are history - I won't be making another batch. But you can always make one yourself - everything you need is in this GitHub repository. 
+
+![Goodbye Talker/80 M1](images/talker80-m1-last-batch.jpg)
+
+
 - 5/1/2022: TRS-80 enthusiast [Paul Metcalf (ptmetcalf3)](https://youtu.be/a-NU-CEUf08?t=1743) has refined and reworked Logan Green's Talker/80 case design from 2019, and shared his "remix" on Tinkercad. It consists of three files: [the main case](https://www.tinkercad.com/things/73WzdeTgU08),  [the lid](https://www.tinkercad.com/things/654B3UJCJeU), and [the speaker grille](https://www.tinkercad.com/things/grB9VmsCIGU). Very cool, thanks for sharing, Logan and Paul! Great work! 
 
 ![Main Case](images/3d-1.png)
