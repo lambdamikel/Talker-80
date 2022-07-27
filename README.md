@@ -7,6 +7,10 @@
 
 ## Latest News
 
+- 7/24/2022: Talker/80 is feature project on Hackaday! 
+
+![Featured](images/featured-project.png)
+
 - 6/17/2022: Goodbye, Talker/80! The last batch of Talker/80's for the Model 1 has been produced, and it sold within 1 week! Now they are history - I won't be making another batch. But you can always make one yourself - everything you need is in this GitHub repository. 
 
 ![Goodbye Talker/80 M1](images/talker80-m1-last-batch.jpg)
