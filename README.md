@@ -7,7 +7,7 @@
 
 ## Latest News
 
-- 7/24/2022: Talker/80 is feature project on Hackaday! 
+- 7/24/2022: Talker/80 is featured project on Hackaday! 
 
 ![Featured](images/featured-project.png)
 
