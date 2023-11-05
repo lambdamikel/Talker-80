@@ -1,0 +1,26 @@
+***********************
+* Talker/80 Model 3/4 *
+***********************
+
+https://github.com/lambdamikel/Talker-80
+
+C1, C2     : 22 pF (224)
+C3 - C5, C8: 100 nF (104)
+C6, C7     : 220 nF (224)
+C9         : 10 nF (103)
+D1, D2, D3 : LEDs
+R1         : 10 kOhm
+R2 - R4    : 1 kOhm (for LEDs)
+R7, R8     : 47 kOhm (OP-Amp voltage divider)
+R9         : 100 kOhm (AVR Reset)
+RV1, RV2   : 503 Trimmer
+RV3        : 101 Trimmer
+
+Note: double check notch of IDC box header on the back of Talker/80
+      (notch faces AWAY FROM Talker/80 edge connector)!
+
+Note: The Op-amp is optional - if you use the loudspeaker output. 
+      Trimmers need to be adjusted for either Op-amp or loudspeaker
+      operation. If you are getting a lot of noise in the loudspeaker,
+      simply remove the OP-amp, it is not needed for loudspeaker-only
+      operation. 
