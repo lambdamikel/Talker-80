@@ -13,13 +13,13 @@ configurations and to my surprise, I got different `INP(11)` status
 ready values, depending on the hardware configuration. By default, one
 should see a 255 when Talker/80 is available to accept input (i.e., it
 is not speaking), but in combination with
-[MIDI/80](https://github.com/lambdamikel/MIDI-80) and FreHD on the bus
-I was getting a 203. It is easy to adjust the demo Talker/80 programs
-to accomodate for this situation. So, if the `WELCOME/BAS` demo hangs
-for you, have a loop at `PRINT INP(11)` after Talker/80 stopped
-talking, and see if you are getting a 203. You might then simply have
-to adjust the busy waiting loops in the BASIC programs. In particular, 
-something like 
+[MIDI/80](https://github.com/lambdamikel/MIDI-80) and FreHD on the
+expansion port I was getting a 203. It is easy to adjust the demo
+Talker/80 programs to accomodate this situation. So, if the
+`WELCOME/BAS` demo hangs for you, have a look at `PRINT INP(11)` after
+Talker/80 stopped talking, and note what you are getting there. You
+might then simply have to adjust the busy waiting loops in the BASIC
+programs. In particular, something like
 
 ```
 <nn> if inp(11)<>255 then goto <nn>
@@ -47,15 +47,16 @@ on the Model III:
 
 ![VOICDEMO for Model III](images/voicdemo.jpg)
 
-The original TRS Voice Synthesizer, and hence the original
-`VOICDEMO/BAS`, only runs on the Model 1, as it gets its input fromt
-the video RAM using a method that is not supported with the Model
-III. However, given that Talker/80 does offer TRS Voice Synthesizer
-Emulation Mode also for the Model III and 4, but using port IO to port
-11 instead of video RAM snooping, I hence modified the `VOICDEMO/BAS`
-so that it would also output the required `out 11,<phoneme byte>`
-instructions, resulting in the same experience as on the Model 1. The
-(modified) program can be found [on this disk.](trs80/m3-vcf-w-2025/)
+The **original TRS Voice Synthesizer**, and hence the original
+`VOICDEMO/BAS`, only runs on the Model 1, as it gets its input from
+the video RAM via screen printing, and that is an IO-method that does
+not work on the Model III. However, Talker/80 for the Model III and 4
+*does* offer the TRS Voice Synthesizer Emulation Mode, just not using
+screen printing / video RAM snooping, but using ordinary IO-port
+output to port 11. I have hence modified the `VOICDEMO/BAS` to also
+output the required `out 11,<phoneme byte>` instructions, resulting in
+the same program experience as on the Model 1. The (modified) program
+can be found [on this disk.](trs80/m3-vcf-w-2025/)
 
 ## Older News
 
