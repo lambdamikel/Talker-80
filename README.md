@@ -76,8 +76,8 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
 - 5/1/2022: TRS-80 enthusiast [Paul Metcalf (ptmetcalf3)](https://youtu.be/a-NU-CEUf08?t=1743) has refined and reworked Logan Green's Talker/80 case design from 2019, and shared his "remix" on Tinkercad. It consists of three files: [the main case](https://www.tinkercad.com/things/73WzdeTgU08),  [the lid](https://www.tinkercad.com/things/654B3UJCJeU), and [the speaker grille](https://www.tinkercad.com/things/grB9VmsCIGU). Very cool, thanks for sharing, Logan and Paul! Great work! 
 
   ![Main Case](images/3d-1.png)
-![Lid](images/3d-2.png)
-![Speaker grille](images/3d-3.png)
+  ![Lid](images/3d-2.png)
+  ![Speaker grille](images/3d-3.png)
 
 
 - 5/1/2022: [Talker/80 noise reduction quick hack:](https://youtu.be/PXlzUbNzO18) If you are using the speaker & built-in PAM amplifier, depending on your speaker, you might get quite a bit of hissing noise. There is an easy fix for that - just pull the op-amp! The op-amp is only needed for line out. And line out and speaker are mutually exclusive anyways, as they require completely different mixing levels. So - op-amp is needed for line out only, else it is better to just pull it, and this will remove all the noise. All ICs are socketed, so this is easy to do. 
@@ -92,7 +92,7 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
 
 - 7/12/2020: Talker/80 is a winner - of the **2020 TRS-80 Double-Do Competition**! Check out the [December 2020 issue](http://www.fabsitesuk.com/tandy/trs8bit1404.pdf) of [Dusty's fabulous fanzine](http://trs-80.org.uk/). As always, **TRS8BIT** is a great read and I am always looking forward to the next issue. Many thanks to Dusty and the Competition Committee for this great recognition and price.
 
-![Talker/80 is a winner](images/talker80-won-competition.jpg)
+  ![Talker/80 is a winner](images/talker80-won-competition.jpg)
 
 
 
@@ -138,9 +138,9 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
  - 7/3/2020: The first Talker/80 for the Model 3 / 4 has been assembled and tested! 
 
   ![Talker/80 for M3/M4 a)](images/talker80-m3m4-a.JPG)
-![Talker/80 for M3/M4 b)](images/talker80-m3m4-b.JPG)
+  ![Talker/80 for M3/M4 b)](images/talker80-m3m4-b.JPG)
 
-![Production](images/batch.jpg)
+  ![Production](images/batch.jpg)
 
 - 7/11/2020: 12 Talker/80 Model 1 have been sold! 
 - 7/21/2020: The first batch of Talker/80 for the Model 3 / 4 has been sold. 
@@ -150,15 +150,15 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
 - 8/31/2020: **Logan**, the 14 year old son of [Vintage Computer Forum user Avia](http://www.vcfed.org/forum/member.php?37029-Avia), has designed a great looking set of clothes for Talker/80 - a 3d printed case for the Model 1 version! Great work, Logan! 
 
   ![Logan's 3d Printed Talker/80 Case](images/Talker80sm.jpg)
-![Logan's 3d Printed Talker/80 Case with Setup](images/Talker802.jpg)
+  ![Logan's 3d Printed Talker/80 Case with Setup](images/Talker802.jpg)
 
 - 9/17/2020: Beware of FAKE COUNTERFEIT GALs on eBay - just bought a bunch of GAL22V10Bs. They are counterfeits - the 22V10D in the picture is real, the 22V10Bs are fake. Even the Lattice logo looks fake. Both my programmers (a Genius G540 and a TL866CS) fails to verify after programming. 
 
   ![FAKE GALs](images/FAKE-GALs.jpg)
 
 - 9/30/2020: Last minute \#SepTandy entry - Talker/80 Model III / Model 4 DIY kit assembly tutorial video: 
-![SepTandy Talker/80](images/septandy2020.jpg)
-[SepTandy Talker/80](https://youtu.be/yHVgSqcxh_4)
+  ![SepTandy Talker/80](images/septandy2020.jpg)
+  [SepTandy Talker/80](https://youtu.be/yHVgSqcxh_4)
 
 - 10/24/2020: I gave a talk about Talker/80 on [TrashTalk Live #8: The INPs and OUTs of Talker/80, A Modern Voice Synthesizer for the TRS-80.](https://youtu.be/BbYI-fFmfQQ) Thanks to Pete Cetinski and Arno Puder for inviting me; here is the [PDF of the presentation.](manuals/Talker80-TrashTalk-10-24-2020-Wessel.pdf)
 
@@ -166,7 +166,7 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
 
 - 11/12/2020: **Schwätzer/80** on ebay.de - check it out! Good to hear that automatic language translation has reached a pinnacle of accuracy! Thanks, eBay, that's a seller in Germany for sure (I hope I am not paying for that auto-language mutilation service...) 
 
-![Schwätzer/80 on eBay.de](images/schwätzer80-ebay.jpg)
+  ![Schwätzer/80 on eBay.de](images/schwätzer80-ebay.jpg)
 
 ## Important License Information
 
