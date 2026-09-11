@@ -62,20 +62,20 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
 
 - 7/29/2022: Talker/80 made it to the front page of the Hackaday blog.
 
-![Featured](images/hackaday.png)
+  ![Featured](images/hackaday.png)
 
 - 7/24/2022: Talker/80 is featured project on Hackaday! 
 
-![Featured](images/featured-project.png)
+  ![Featured](images/featured-project.png)
 
 - 6/17/2022: Goodbye, Talker/80! The last batch of Talker/80's for the Model 1 has been produced, and it sold within 1 week! Now they are history - I won't be making another batch. But you can always make one yourself - everything you need is in this GitHub repository. 
 
-![Goodbye Talker/80 M1](images/talker80-m1-last-batch.jpg)
+  ![Goodbye Talker/80 M1](images/talker80-m1-last-batch.jpg)
 
 
 - 5/1/2022: TRS-80 enthusiast [Paul Metcalf (ptmetcalf3)](https://youtu.be/a-NU-CEUf08?t=1743) has refined and reworked Logan Green's Talker/80 case design from 2019, and shared his "remix" on Tinkercad. It consists of three files: [the main case](https://www.tinkercad.com/things/73WzdeTgU08),  [the lid](https://www.tinkercad.com/things/654B3UJCJeU), and [the speaker grille](https://www.tinkercad.com/things/grB9VmsCIGU). Very cool, thanks for sharing, Logan and Paul! Great work! 
 
-![Main Case](images/3d-1.png)
+  ![Main Case](images/3d-1.png)
 ![Lid](images/3d-2.png)
 ![Speaker grille](images/3d-3.png)
 
@@ -84,11 +84,11 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
 
 - 3/30/2022: [Talker/80 with PocketTRS by John Dias!](https://youtu.be/__6tL8iR-zk) PocketTRS is a great Model III / 4 in your pocket! And it has a real expansion port - works with FreHD, and also with Talker/80. Great stuff, thanks for posting - not sure why the deep and slow voice (the default voice is actually quite a bit faster and higher in pitch), but hey, why not :-) Thanks for posting, John Dias!  
 
-![John Dias PocketTRS](images/pockettrs.png)
+  ![John Dias PocketTRS](images/pockettrs.png)
 
 - 10/7/2021: Talker/80 in Germany! Great video by ["The Homecomputerguy"](https://homecomputerguy.de/) who took his Talker/80 to the ["Classic Computing 2021"](https://www.classic-computing.org/cc2021/) fair in Vöhringen! Thanks for the [great video](https://youtu.be/QB91IUFZ_X8) and for demoing Talker/80!
 
-![Ruebesoft Talker/80](images/ruebesoft.PNG)
+  ![Ruebesoft Talker/80](images/ruebesoft.PNG)
 
 - 7/12/2020: Talker/80 is a winner - of the **2020 TRS-80 Double-Do Competition**! Check out the [December 2020 issue](http://www.fabsitesuk.com/tandy/trs8bit1404.pdf) of [Dusty's fabulous fanzine](http://trs-80.org.uk/). As always, **TRS8BIT** is a great read and I am always looking forward to the next issue. Many thanks to Dusty and the Competition Committee for this great recognition and price.
 
@@ -102,7 +102,7 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
  - 5/6/2020: The first three Talker/80's have been sold! 
  - 5/7/2020: [Hackster posted the Talker/80 story.](https://www.hackster.io/news/michael-wessel-s-talker-80-brings-back-the-classic-trs-80-voice-synthesizer-add-on-bfe66999ac29) 
 
-![TRS-80 Model 1 with Talker/80](images/hackster-instagram-post.jpg)
+  ![TRS-80 Model 1 with Talker/80](images/hackster-instagram-post.jpg)
 
  - 5/8/2020: I am waiting for feedback from the first three customers before selling more. 
  - 5/11/2020: Three more Talker/80 have been assembled. I ran out of click speech boards. Need to reorder. 
@@ -128,16 +128,16 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
  - 5/24/2020: 6 Talker/80 have been sold by now - thanks a lot for supporting the project! 
  - 5/31/2020: 9 Talker/80 have been sold. MATRIXSYNTH.COM tweeted about Talker/80: 
 
-![Matrixsynth Talker/80](images/matrixsynth.jpg)
+  ![Matrixsynth Talker/80](images/matrixsynth.jpg)
 
  - 6/9/2020: The **Talker/80 Model 3 & Model 4** version has been designed and been sent to OshPark for PCB fabrication. 
  - 6/16/2020: Check out [**TRS-80 TrashTalk Episode 36**](https://www.trs80trashtalk.com/2020/06/episode-36.html) and **TrashTalker Eric Dittman's review of Talker/80!** Thanks to Eric and the TrashTalkers for supporting the project. 
 
-![TRS-80 TashTalk Episode 36](images/trashtalk.jpg)
+  ![TRS-80 TashTalk Episode 36](images/trashtalk.jpg)
 
  - 7/3/2020: The first Talker/80 for the Model 3 / 4 has been assembled and tested! 
 
-![Talker/80 for M3/M4 a)](images/talker80-m3m4-a.JPG)
+  ![Talker/80 for M3/M4 a)](images/talker80-m3m4-a.JPG)
 ![Talker/80 for M3/M4 b)](images/talker80-m3m4-b.JPG)
 
 ![Production](images/batch.jpg)
@@ -145,16 +145,16 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
 - 7/11/2020: 12 Talker/80 Model 1 have been sold! 
 - 7/21/2020: The first batch of Talker/80 for the Model 3 / 4 has been sold. 
 
-![Talker/80 for M3/M4 c)](images/talker80-m3m4-first-batch.jpg)
+  ![Talker/80 for M3/M4 c)](images/talker80-m3m4-first-batch.jpg)
 
 - 8/31/2020: **Logan**, the 14 year old son of [Vintage Computer Forum user Avia](http://www.vcfed.org/forum/member.php?37029-Avia), has designed a great looking set of clothes for Talker/80 - a 3d printed case for the Model 1 version! Great work, Logan! 
 
-![Logan's 3d Printed Talker/80 Case](images/Talker80sm.jpg)
+  ![Logan's 3d Printed Talker/80 Case](images/Talker80sm.jpg)
 ![Logan's 3d Printed Talker/80 Case with Setup](images/Talker802.jpg)
 
 - 9/17/2020: Beware of FAKE COUNTERFEIT GALs on eBay - just bought a bunch of GAL22V10Bs. They are counterfeits - the 22V10D in the picture is real, the 22V10Bs are fake. Even the Lattice logo looks fake. Both my programmers (a Genius G540 and a TL866CS) fails to verify after programming. 
 
-![FAKE GALs](images/FAKE-GALs.jpg)
+  ![FAKE GALs](images/FAKE-GALs.jpg)
 
 - 9/30/2020: Last minute \#SepTandy entry - Talker/80 Model III / Model 4 DIY kit assembly tutorial video: 
 ![SepTandy Talker/80](images/septandy2020.jpg)
@@ -162,7 +162,7 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
 
 - 10/24/2020: I gave a talk about Talker/80 on [TrashTalk Live #8: The INPs and OUTs of Talker/80, A Modern Voice Synthesizer for the TRS-80.](https://youtu.be/BbYI-fFmfQQ) Thanks to Pete Cetinski and Arno Puder for inviting me; here is the [PDF of the presentation.](manuals/Talker80-TrashTalk-10-24-2020-Wessel.pdf)
 
-![Trash Talke Live No.8](images/trashtalk-live.jpg)
+  ![Trash Talke Live No.8](images/trashtalk-live.jpg)
 
 - 11/12/2020: **Schwätzer/80** on ebay.de - check it out! Good to hear that automatic language translation has reached a pinnacle of accuracy! Thanks, eBay, that's a seller in Germany for sure (I hope I am not paying for that auto-language mutilation service...) 
 
