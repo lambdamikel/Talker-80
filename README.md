@@ -72,15 +72,13 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
 
   ![Goodbye Talker/80 M1](images/talker80-m1-last-batch.jpg)
 
-
 - 5/1/2022: TRS-80 enthusiast [Paul Metcalf (ptmetcalf3)](https://youtu.be/a-NU-CEUf08?t=1743) has refined and reworked Logan Green's Talker/80 case design from 2019, and shared his "remix" on Tinkercad. It consists of three files: [the main case](https://www.tinkercad.com/things/73WzdeTgU08),  [the lid](https://www.tinkercad.com/things/654B3UJCJeU), and [the speaker grille](https://www.tinkercad.com/things/grB9VmsCIGU). Very cool, thanks for sharing, Logan and Paul! Great work! 
 
   ![Main Case](images/3d-1.png)
   ![Lid](images/3d-2.png)
   ![Speaker grille](images/3d-3.png)
 
-
-- 5/1/2022: [Talker/80 noise reduction quick hack:](https://youtu.be/PXlzUbNzO18) If you are using the speaker & built-in PAM amplifier, depending on your speaker, you might get quite a bit of hissing noise. There is an easy fix for that - just pull the op-amp! The op-amp is only needed for line out. And line out and speaker are mutually exclusive anyways, as they require completely different mixing levels. So - op-amp is needed for line out only, else it is better to just pull it, and this will remove all the noise. All ICs are socketed, so this is easy to do. 
+- 5/1/2022: [Talker/80 noise reduction quick hack:](https://youtu.be/PXlzUbNzO18) If you are using the speaker & built-in PAM amplifier, depending on your speaker, you might get quite a bit of hissing noise. There is an easy fix for that - just pull the op-amp! The op-amp is only needed for line out. And line out and speaker are mutually exclusive anyways, as they require completely different mixing levels. So - op-amp is needed for line out only, else it is better to just pull it, and this will remove all the noise. All ICs are socketed, so this is easy to do.
 
 - 3/30/2022: [Talker/80 with PocketTRS by John Dias!](https://youtu.be/__6tL8iR-zk) PocketTRS is a great Model III / 4 in your pocket! And it has a real expansion port - works with FreHD, and also with Talker/80. Great stuff, thanks for posting - not sure why the deep and slow voice (the default voice is actually quite a bit faster and higher in pitch), but hey, why not :-) Thanks for posting, John Dias!  
 
@@ -90,83 +88,91 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
 
   ![Ruebesoft Talker/80](images/ruebesoft.PNG)
 
-- 7/12/2020: Talker/80 is a winner - of the **2020 TRS-80 Double-Do Competition**! Check out the [December 2020 issue](http://www.fabsitesuk.com/tandy/trs8bit1404.pdf) of [Dusty's fabulous fanzine](http://trs-80.org.uk/). As always, **TRS8BIT** is a great read and I am always looking forward to the next issue. Many thanks to Dusty and the Competition Committee for this great recognition and price.
+- 11/12/2020: **Schwätzer/80** on ebay.de - check it out! Good to hear that automatic language translation has reached a pinnacle of accuracy! Thanks, eBay, that's a seller in Germany for sure (I hope I am not paying for that auto-language mutilation service...) 
 
-  ![Talker/80 is a winner](images/talker80-won-competition.jpg)
+  ![Schwätzer/80 on eBay.de](images/schwätzer80-ebay.jpg)
 
+- 10/24/2020: I gave a talk about Talker/80 on [TrashTalk Live #8: The INPs and OUTs of Talker/80, A Modern Voice Synthesizer for the TRS-80.](https://youtu.be/BbYI-fFmfQQ) Thanks to Pete Cetinski and Arno Puder for inviting me; here is the [PDF of the presentation.](manuals/Talker80-TrashTalk-10-24-2020-Wessel.pdf)
 
+  ![Trash Talke Live No.8](images/trashtalk-live.jpg)
 
-## Older News 
+- 9/30/2020: Last minute \#SepTandy entry - Talker/80 Model III / Model 4 DIY kit assembly tutorial video: 
+  ![SepTandy Talker/80](images/septandy2020.jpg)
+  [SepTandy Talker/80](https://youtu.be/yHVgSqcxh_4)
 
- - 5/5/2020: Talker/80 for the Model 1 is available!
- - 5/6/2020: The first three Talker/80's have been sold! 
- - 5/7/2020: [Hackster posted the Talker/80 story.](https://www.hackster.io/news/michael-wessel-s-talker-80-brings-back-the-classic-trs-80-voice-synthesizer-add-on-bfe66999ac29) 
+- 9/17/2020: Beware of FAKE COUNTERFEIT GALs on eBay - just bought a bunch of GAL22V10Bs. They are counterfeits - the 22V10D in the picture is real, the 22V10Bs are fake. Even the Lattice logo looks fake. Both my programmers (a Genius G540 and a TL866CS) fails to verify after programming. 
 
-  ![TRS-80 Model 1 with Talker/80](images/hackster-instagram-post.jpg)
-
- - 5/8/2020: I am waiting for feedback from the first three customers before selling more. 
- - 5/11/2020: Three more Talker/80 have been assembled. I ran out of click speech boards. Need to reorder. 
- - 5/12/2020: Hackster's Instagram post shows 1.182 likes after 3 days :-) 
- - 5/12/2020: Confirmed that the TRS Voice Synthesizer Emulation Mode also works from the Expansion Interface expansion port edge connector (left front corner, left side edge connector of the EI). 
- - 5/14/2020: I was being asked in the Vintage Computer Forum about the availability of the Gerbers and the ATmega firmware. Currently, I am waiting to hear from the first three customers if there were any problems with theirs setups. If there are no major problems, I am going to make the Gerbers and firmware available soon, hopefully by the end of May. Stay tuned!
- - 5/21/2020: One of the first Talker/80 users has published a positive review on the [Vintage Computer Forum.](http://www.vcfed.org/forum/showthread.php?74036-Talker-80-New-Voice-Synthesizer-in-the-Making/page4) Review from **Alphasite:** 
-
->I've had my Talker/80 for a couple of days.
->
->My first impression is this is very nice board and the fact that it emulates multiple voice synthesizers for the Model I is amazing.
->
->My first test was to connect it to my Model I and Expansion Interface and use the HFE image provided in the Github page. I ran all the included tests successfully. I was very impressed.
->
->My next test was to connect the Talker/80 to the Model I directly and then connect a Quinnterface/FreHD to the Talker/80. For this the power on sequence is critical. You must power on the Talker/80 first, then the Q/F combo. I didn't wait long enough and the Talker/80 would hang. The power on sequence is mentioned in the documentation and I found that if I waited for the Talker/80 to finish with the startup message before powering on the Q/F I was able to boot. It may not be necessary to wait that long but I didn't test because it's only a matter of a couple of seconds.
->
->My latest test was to try the Talker/80 with the MIRE and MISE. First I connected the MIRE to the Model I and then the Talker/80. I had this all on a power switch and they powered on at the same time and there wasn't an issue. I had the Talking Eliza program loaded on my MIRE emulated floppy from testing a Radio Shack Voice Synthesizer so I set the dip switches on the Talker/80 to start up in RS VS mode and reset. I then ran Talking Eliza and it worked perfectly. I then powered everything off and connected the MISE to the expansion connector on the Talker/80 and powered everything up again. Again everything came up without any issues. The Talking Eliza program still worked.
->
->Did I mention that I am very impressed? 
-
- - 5/23/2020: Firmware sources and Gerbers added. 
- - 5/24/2020: Link to Seeed Gallery for PCB ordering added. Note that there is also the OshPark link - the OshPark PCBs have far superior quality (copper instead of tin!), but are also a bit more pricey. However, the higher quality might pay off especially considering the Talker/80 expansion port connector  passthrough. 
- - 5/24/2020: 6 Talker/80 have been sold by now - thanks a lot for supporting the project! 
- - 5/31/2020: 9 Talker/80 have been sold. MATRIXSYNTH.COM tweeted about Talker/80: 
-
-  ![Matrixsynth Talker/80](images/matrixsynth.jpg)
-
- - 6/9/2020: The **Talker/80 Model 3 & Model 4** version has been designed and been sent to OshPark for PCB fabrication. 
- - 6/16/2020: Check out [**TRS-80 TrashTalk Episode 36**](https://www.trs80trashtalk.com/2020/06/episode-36.html) and **TrashTalker Eric Dittman's review of Talker/80!** Thanks to Eric and the TrashTalkers for supporting the project. 
-
-  ![TRS-80 TashTalk Episode 36](images/trashtalk.jpg)
-
- - 7/3/2020: The first Talker/80 for the Model 3 / 4 has been assembled and tested! 
-
-  ![Talker/80 for M3/M4 a)](images/talker80-m3m4-a.JPG)
-  ![Talker/80 for M3/M4 b)](images/talker80-m3m4-b.JPG)
-
-  ![Production](images/batch.jpg)
-
-- 7/11/2020: 12 Talker/80 Model 1 have been sold! 
-- 7/21/2020: The first batch of Talker/80 for the Model 3 / 4 has been sold. 
-
-  ![Talker/80 for M3/M4 c)](images/talker80-m3m4-first-batch.jpg)
+  ![FAKE GALs](images/FAKE-GALs.jpg)
 
 - 8/31/2020: **Logan**, the 14 year old son of [Vintage Computer Forum user Avia](http://www.vcfed.org/forum/member.php?37029-Avia), has designed a great looking set of clothes for Talker/80 - a 3d printed case for the Model 1 version! Great work, Logan! 
 
   ![Logan's 3d Printed Talker/80 Case](images/Talker80sm.jpg)
   ![Logan's 3d Printed Talker/80 Case with Setup](images/Talker802.jpg)
 
-- 9/17/2020: Beware of FAKE COUNTERFEIT GALs on eBay - just bought a bunch of GAL22V10Bs. They are counterfeits - the 22V10D in the picture is real, the 22V10Bs are fake. Even the Lattice logo looks fake. Both my programmers (a Genius G540 and a TL866CS) fails to verify after programming. 
+- 7/21/2020: The first batch of Talker/80 for the Model 3 / 4 has been sold. 
 
-  ![FAKE GALs](images/FAKE-GALs.jpg)
+  ![Talker/80 for M3/M4 c)](images/talker80-m3m4-first-batch.jpg)
 
-- 9/30/2020: Last minute \#SepTandy entry - Talker/80 Model III / Model 4 DIY kit assembly tutorial video: 
-  ![SepTandy Talker/80](images/septandy2020.jpg)
-  [SepTandy Talker/80](https://youtu.be/yHVgSqcxh_4)
+- 7/12/2020: Talker/80 is a winner - of the **2020 TRS-80 Double-Do Competition**! Check out the [December 2020 issue](http://www.fabsitesuk.com/tandy/trs8bit1404.pdf) of [Dusty's fabulous fanzine](http://trs-80.org.uk/). As always, **TRS8BIT** is a great read and I am always looking forward to the next issue. Many thanks to Dusty and the Competition Committee for this great recognition and price.
 
-- 10/24/2020: I gave a talk about Talker/80 on [TrashTalk Live #8: The INPs and OUTs of Talker/80, A Modern Voice Synthesizer for the TRS-80.](https://youtu.be/BbYI-fFmfQQ) Thanks to Pete Cetinski and Arno Puder for inviting me; here is the [PDF of the presentation.](manuals/Talker80-TrashTalk-10-24-2020-Wessel.pdf)
+  ![Talker/80 is a winner](images/talker80-won-competition.jpg)
 
-  ![Trash Talke Live No.8](images/trashtalk-live.jpg)
+- 7/11/2020: 12 Talker/80 Model 1 have been sold!
 
-- 11/12/2020: **Schwätzer/80** on ebay.de - check it out! Good to hear that automatic language translation has reached a pinnacle of accuracy! Thanks, eBay, that's a seller in Germany for sure (I hope I am not paying for that auto-language mutilation service...) 
+- 7/3/2020: The first Talker/80 for the Model 3 / 4 has been assembled and tested! 
 
-  ![Schwätzer/80 on eBay.de](images/schwätzer80-ebay.jpg)
+  ![Talker/80 for M3/M4 a)](images/talker80-m3m4-a.JPG)
+  ![Talker/80 for M3/M4 b)](images/talker80-m3m4-b.JPG)
+
+  ![Production](images/batch.jpg)
+
+- 6/16/2020: Check out [**TRS-80 TrashTalk Episode 36**](https://www.trs80trashtalk.com/2020/06/episode-36.html) and **TrashTalker Eric Dittman's review of Talker/80!** Thanks to Eric and the TrashTalkers for supporting the project. 
+
+  ![TRS-80 TashTalk Episode 36](images/trashtalk.jpg)
+
+- 6/9/2020: The **Talker/80 Model 3 & Model 4** version has been designed and been sent to OshPark for PCB fabrication.
+
+- 5/31/2020: 9 Talker/80 have been sold. MATRIXSYNTH.COM tweeted about Talker/80: 
+
+  ![Matrixsynth Talker/80](images/matrixsynth.jpg)
+
+- 5/24/2020: Link to Seeed Gallery for PCB ordering added. Note that there is also the OshPark link - the OshPark PCBs have far superior quality (copper instead of tin!), but are also a bit more pricey. However, the higher quality might pay off especially considering the Talker/80 expansion port connector  passthrough.
+
+- 5/24/2020: 6 Talker/80 have been sold by now - thanks a lot for supporting the project!
+
+- 5/23/2020: Firmware sources and Gerbers added.
+
+- 5/21/2020: One of the first Talker/80 users has published a positive review on the [Vintage Computer Forum.](http://www.vcfed.org/forum/showthread.php?74036-Talker-80-New-Voice-Synthesizer-in-the-Making/page4) Review from **Alphasite:** 
+
+  >I've had my Talker/80 for a couple of days.
+  >
+  >My first impression is this is very nice board and the fact that it emulates multiple voice synthesizers for the Model I is amazing.
+  >
+  >My first test was to connect it to my Model I and Expansion Interface and use the HFE image provided in the Github page. I ran all the included tests successfully. I was very impressed.
+  >
+  >My next test was to connect the Talker/80 to the Model I directly and then connect a Quinnterface/FreHD to the Talker/80. For this the power on sequence is critical. You must power on the Talker/80 first, then the Q/F combo. I didn't wait long enough and the Talker/80 would hang. The power on sequence is mentioned in the documentation and I found that if I waited for the Talker/80 to finish with the startup message before powering on the Q/F I was able to boot. It may not be necessary to wait that long but I didn't test because it's only a matter of a couple of seconds.
+  >
+  >My latest test was to try the Talker/80 with the MIRE and MISE. First I connected the MIRE to the Model I and then the Talker/80. I had this all on a power switch and they powered on at the same time and there wasn't an issue. I had the Talking Eliza program loaded on my MIRE emulated floppy from testing a Radio Shack Voice Synthesizer so I set the dip switches on the Talker/80 to start up in RS VS mode and reset. I then ran Talking Eliza and it worked perfectly. I then powered everything off and connected the MISE to the expansion connector on the Talker/80 and powered everything up again. Again everything came up without any issues. The Talking Eliza program still worked.
+  >
+  >Did I mention that I am very impressed?
+
+- 5/14/2020: I was being asked in the Vintage Computer Forum about the availability of the Gerbers and the ATmega firmware. Currently, I am waiting to hear from the first three customers if there were any problems with theirs setups. If there are no major problems, I am going to make the Gerbers and firmware available soon, hopefully by the end of May. Stay tuned!
+
+- 5/12/2020: Hackster's Instagram post shows 1.182 likes after 3 days :-)
+
+- 5/12/2020: Confirmed that the TRS Voice Synthesizer Emulation Mode also works from the Expansion Interface expansion port edge connector (left front corner, left side edge connector of the EI).
+
+- 5/11/2020: Three more Talker/80 have been assembled. I ran out of click speech boards. Need to reorder.
+
+- 5/8/2020: I am waiting for feedback from the first three customers before selling more.
+
+- 5/7/2020: [Hackster posted the Talker/80 story.](https://www.hackster.io/news/michael-wessel-s-talker-80-brings-back-the-classic-trs-80-voice-synthesizer-add-on-bfe66999ac29) 
+
+  ![TRS-80 Model 1 with Talker/80](images/hackster-instagram-post.jpg)
+
+- 5/6/2020: The first three Talker/80's have been sold!
+
+- 5/5/2020: Talker/80 for the Model 1 is available!
 
 ## Important License Information
 
