@@ -86,7 +86,7 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
 
 ![John Dias PocketTRS](images/pockettrs.png)
 
-- 10/7/2021: Talker/80 in Germany! Great video by ["The Homecomputerguy"](https://homecomputerguy.de/) who took his Talker/80 to the ["Classic Computing 2021"](https://www.classic-computing.org/cc2021/) fair in Vˆhringen! Thanks for the [great video](https://youtu.be/QB91IUFZ_X8) and for demoing Talker/80!
+- 10/7/2021: Talker/80 in Germany! Great video by ["The Homecomputerguy"](https://homecomputerguy.de/) who took his Talker/80 to the ["Classic Computing 2021"](https://www.classic-computing.org/cc2021/) fair in V√∂hringen! Thanks for the [great video](https://youtu.be/QB91IUFZ_X8) and for demoing Talker/80!
 
 ![Ruebesoft Talker/80](images/ruebesoft.PNG)
 
@@ -108,7 +108,7 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
  - 5/11/2020: Three more Talker/80 have been assembled. I ran out of click speech boards. Need to reorder. 
  - 5/12/2020: Hackster's Instagram post shows 1.182 likes after 3 days :-) 
  - 5/12/2020: Confirmed that the TRS Voice Synthesizer Emulation Mode also works from the Expansion Interface expansion port edge connector (left front corner, left side edge connector of the EI). 
- - 5/14/2020: I was being asked in the Vintage Computer Forum about the availabilty of the Gerbers and the ATmega firmware. Currently, I am waiting to hear from the first three customers if there were any problems with theirs setups. If there are no major problems, I am going to make the Gerbers and firmware available soon, hopefully by the end of May. Stay tuned!
+ - 5/14/2020: I was being asked in the Vintage Computer Forum about the availability of the Gerbers and the ATmega firmware. Currently, I am waiting to hear from the first three customers if there were any problems with theirs setups. If there are no major problems, I am going to make the Gerbers and firmware available soon, hopefully by the end of May. Stay tuned!
  - 5/21/2020: One of the first Talker/80 users has published a positive review on the [Vintage Computer Forum.](http://www.vcfed.org/forum/showthread.php?74036-Talker-80-New-Voice-Synthesizer-in-the-Making/page4) Review from **Alphasite:** 
 
 >I've had my Talker/80 for a couple of days.
@@ -164,9 +164,9 @@ can be found [on this disk.](trs80/m3-vcf-w-2025/)
 
 ![Trash Talke Live No.8](images/trashtalk-live.jpg)
 
-- 11/12/2020: **Schw‰tzer/80** on ebay.de - check it out! Good to hear that automatic language translation has reached a pinnacle of accuracy! Thanks, eBay, that's a seller in Germany for sure (I hope I am not paying for that auto-language mutilation service...) 
+- 11/12/2020: **Schw√§tzer/80** on ebay.de - check it out! Good to hear that automatic language translation has reached a pinnacle of accuracy! Thanks, eBay, that's a seller in Germany for sure (I hope I am not paying for that auto-language mutilation service...) 
 
-![Schw‰tzer/80 on eBay.de](images/schw‰tzer80-ebay.jpg)
+![Schw√§tzer/80 on eBay.de](images/schw√§tzer80-ebay.jpg)
 
 ## Important License Information
 
@@ -193,20 +193,20 @@ Talker/80 offers:
 
  3. **VS-100 Voice Synthesizer from Alpha Products Emulation**: another classic TRS-80 voice synthesizer. Also used the Votrax SC-01, but was / is not compatible with the TRS Voice Synthesizer. Talker/80 uses the same method of emulation (mapping to DECtalk phonemes). Same comments wrt. buffering etc. apply. Original software works without patches (e.g., VS48 and VS-100DEMO.BAS etc.). In addition, **pitch control is currently no supported**, so the speech will be monotonous. 
 
- 4. **Cassette Sound Input Port and Audio Mixer**: Talker/80 is equipped with two input stero mini jacks - one for the output from the MikroElektronika speech daughterboard, and one can be connected to the TRS 80 Cassette Output Port for sound (or any other source, really). The signals are being mixed. Two input pots on the right and corresponding trimmers on the left side are used to determine the two signal levels for the mix. The mixed LM741 output signal is available at the output mini jack on the left side. 
+ 4. **Cassette Sound Input Port and Audio Mixer**: Talker/80 is equipped with two input stereo mini jacks - one for the output from the MikroElektronika speech daughterboard, and one can be connected to the TRS 80 Cassette Output Port for sound (or any other source, really). The signals are being mixed. Two input pots on the right and corresponding trimmers on the left side are used to determine the two signal levels for the mix. The mixed LM741 output signal is available at the output mini jack on the left side. 
 
  5. **Optional Amplifier and Loudspeaker**: In addition, a little "off the shelf" D-class audio amplifier can be fitted on the PCB. The two input signals (after the pots / trimmers) is being amplified. The output is available to the loudspeaker pin header at the back of the PCB. The output volume is controlled by the trimmer / pot at the top right.  
 
  6. **Expansion Port Pass Through Connector**: The *Model 1 Talker/80* connects directly to the Model 1 expansion port, or, if an Expansion Interface (EI) is available, to the Expansion Port passthrough of the EI (this is the port in the left front corner on the left side). The Talker/80 expansion port edge connector is at the back of the PCB. You can either connect the EI directly to the Model 1, or to Talker/80's edge connector. Talker/80 is fully compatible with the EI, Floppy Disks, FreHD, etc. The *Model 3 / 4 Talker/80* connects to the expansion port of the TRS-80 using the 50pin ribbon cable. 
 
- 7. **DIP Switch for Initial Mode Selection**: for selecting the intial startup mode of Talker/80. The mode can be changed via software as well (by sending a so-called "control byte"). 
+ 7. **DIP Switch for Initial Mode Selection**: for selecting the initial startup mode of Talker/80. The mode can be changed via software as well (by sending a so-called "control byte"). 
 
  8. **RESET button**: for reinitializing / "rebooting" Talker/80. In combination with the DIP switch, the mode can be changed easily without having to use software to send control bytes. 
 
- 9. **Three LEDs**: These LEDs are used for mode indiciation, to signal data being received, to indicate when Talker/80 is speaking, and when a single phoneme is being uttered. LEDs will also indicate errors. 
+ 9. **Three LEDs**: These LEDs are used for mode indication, to signal data being received, to indicate when Talker/80 is speaking, and when a single phoneme is being uttered. LEDs will also indicate errors. 
 
 
-A main difference between the DECtalk-based emulation and the original synthesizers is that it is not possible to utter phonemes "in realtime", as DECtalk requires phoneme buffering and processing before they can be spoken, unlike the SC-01, which is able to utter a phoneme immediatly (they can, for example, be used as "realtime sound effects"). This is exploited, for example, in the TRS Voice Synthesizer BASIC Demo Program, which spells out individual phonemes in real time ("the phonemes in the word zero are: z e r o" etc.) Due to the buffering requirement for DECtalk, this is challenging to get right. Please check out my demo videos below to see if you can live with the result. 
+A main difference between the DECtalk-based emulation and the original synthesizers is that it is not possible to utter phonemes "in realtime", as DECtalk requires phoneme buffering and processing before they can be spoken, unlike the SC-01, which is able to utter a phoneme immediately (they can, for example, be used as "realtime sound effects"). This is exploited, for example, in the TRS Voice Synthesizer BASIC Demo Program, which spells out individual phonemes in real time ("the phonemes in the word zero are: z e r o" etc.) Due to the buffering requirement for DECtalk, this is challenging to get right. Please check out my demo videos below to see if you can live with the result. 
 
 
 ## TRS-80 Model 1 Connection & Startup Sequence 
@@ -237,9 +237,9 @@ powered on in the right order of sequence. First power on the expansions (Talker
 
 ## Hardware Description
 
-Talker/80 uses an ATmega 644-20 (U4) clocked at 16 MHz as its microcontroller. The firmware has ~ 45 KBs. The firmware was programmed in C, using the WinAVR / GCC toolchain. At startup, the ATmega loads the Epson firmware image (implementing DECtalk) over SPI into the speech daughterboard. At runtime, SPI is used as well. External interupts are being used to register read and write requests. The address decoding is done by a GAL20V10 (U1), and another GAL20V10 (U2) is acting as a tristate databus latch and also provides status input (bits 6 and 7) to the TRS-80 in all modes other than the TRS Voice Synthesizer emulation mode. U5 is the op-amp.  The programming / firmware of the address decoder GAL U1 used for the Model 3 / 4 version differs from the Model 1 version. All other chips (and their programming) are identical. 
+Talker/80 uses an ATmega 644-20 (U4) clocked at 16 MHz as its microcontroller. The firmware has ~ 45 KBs. The firmware was programmed in C, using the WinAVR / GCC toolchain. At startup, the ATmega loads the Epson firmware image (implementing DECtalk) over SPI into the speech daughterboard. At runtime, SPI is used as well. External interrupts are being used to register read and write requests. The address decoding is done by a GAL20V10 (U1), and another GAL20V10 (U2) is acting as a tristate databus latch and also provides status input (bits 6 and 7) to the TRS-80 in all modes other than the TRS Voice Synthesizer emulation mode. U5 is the op-amp.  The programming / firmware of the address decoder GAL U1 used for the Model 3 / 4 version differs from the Model 1 version. All other chips (and their programming) are identical. 
 
-The current mode of Talker/80 is being signaled to the address decoder GAL U2, using 2 bits for the 4 different modes. Depending on the mode, the GAL U2 eiher decodes IO requests (using IN and OUT signals), or video RAM addresses (and signals RD and WR) to implement "video RAM snooping" (a form of memory-based IO) as required for the TRS Voice Synthesizer. The details can be found in the GAL code. This only works on the Model 1, since the Model 3 / 4 doesn't support memory-based IO. 
+The current mode of Talker/80 is being signaled to the address decoder GAL U2, using 2 bits for the 4 different modes. Depending on the mode, the GAL U2 either decodes IO requests (using IN and OUT signals), or video RAM addresses (and signals RD and WR) to implement "video RAM snooping" (a form of memory-based IO) as required for the TRS Voice Synthesizer. The details can be found in the GAL code. This only works on the Model 1, since the Model 3 / 4 doesn't support memory-based IO. 
 
 Applications can read from IO port 11 to find out if Talker/80 is actively speaking. Note that input to Talker/80 is always buffered, so realtime control of the speaking process (e.g., "voice synthesizer sound effects") is not achievable. As usual, the ``EXTIOSEL`` signal is being used on the Model 3 / 4 to signal an IO read request from port 11. 
 
@@ -271,7 +271,7 @@ These are the SC-01 phonemes; the VS-100 phonemes are identical:
 
 Note that, in order to do the text-to-speech / phoneme mapping, the VS-100 software driver can be used (the programs ``VS48`` and ``VS32``). These drivers allow text-to-speech from BASIC then, so the driver performs the text to phoneme mapping.   
 
-Talker/80 **does not implement the pitch control feature of the SC-01.** The VS-100 uses the last two bits (Bits 6 and 7) of the phoneme bytes to encode / provide pitch control; i.e., each phoneme has in principle 4 different "pronounciations" or "pitches".  These two pitch bits on phonemes are currently being ignored by Talker/80 and hence not supported. To prevent interference with existing VS-100 software, the control bytes understood by Talker/80 in the DECtalk and EPSON modes, are NOT supported in the VS-100 mode. 
+Talker/80 **does not implement the pitch control feature of the SC-01.** The VS-100 uses the last two bits (Bits 6 and 7) of the phoneme bytes to encode / provide pitch control; i.e., each phoneme has in principle 4 different "pronunciations" or "pitches".  These two pitch bits on phonemes are currently being ignored by Talker/80 and hence not supported. To prevent interference with existing VS-100 software, the control bytes understood by Talker/80 in the DECtalk and EPSON modes, are NOT supported in the VS-100 mode. 
 
 Since control bytes are not accepted in this mode, all changes to the default settings need to be made BEFORE entering the VS-100 mode. For example, if a different voice, speech rate or volume is required in the VS-100 mode, then make these changes to the setting from the EPSON or DECtalk mode first, and then enter the VS-100 mode from using the corresponding control byte `&EB`. The changed voice synthesizer settings will then carry over to the VS-100 mode. The mode can only be exited by using the RESET button. 
 
@@ -676,8 +676,8 @@ Default settings are shown in **bold**:
 | 0xE9 / 233   | Disable audible command confirmations (for control bytes).         | 
 | 0xE8 / 232   | **Enable English.**                                                | 
 | 0xE7 / 231   | Enable Castilian Spanish.                                          | 
-| 0xE6 / 230   | Enable alternate VS-100 / TRS Voice Synth pronounciation.          | 
-| 0xE5 / 229   | **Use normal VS-100 / TRS Voice Synth pronounciation.**            | 
+| 0xE6 / 230   | Enable alternate VS-100 / TRS Voice Synth pronunciation.          | 
+| 0xE5 / 229   | **Use normal VS-100 / TRS Voice Synth pronunciation.**            | 
 -------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------
@@ -756,8 +756,8 @@ It contains the following:
 | ENGLISH.BAS  | EPSON MODE English speaking demo.             |
 | SPANISH.BAS  | EPSON MODE Spanish speaking demo.             |
 | TALKER.BAS   | EPSON / DECtalk text-to-speech demo program.  |
-| TALKER2.BAS  | Dito, with status port reading display.       |
-| TALKER3.BAS  | Dito, plust STOP command from keyboard.       |
+| TALKER2.BAS  | Ditto, with status port reading display.       |
+| TALKER3.BAS  | Ditto, plus STOP command from keyboard.       |
 | SENDBYTE.BAS | In EPSON or DECtalk mode, send a control byte.|
 | ELIZA80.BAS  | Jeff Shrager's Eliza for Talker/80 EPSON Mode.|
 | BUSYTEST.BAS | INP(11) port busy signal read test.           |
@@ -794,8 +794,8 @@ BASIC programs):
 | ENGLISH.BAS  | EPSON MODE English speaking demo.             |
 | SPANISH.BAS  | EPSON MODE Spanish speaking demo.             |
 | TALKER.BAS   | EPSON / DECtalk text-to-speech demo program.  |
-| TALKER2.BAS  | Dito, with status port reading display.       |
-| TALKER3.BAS  | Dito, plust STOP command from keyboard.       |
+| TALKER2.BAS  | Ditto, with status port reading display.       |
+| TALKER3.BAS  | Ditto, plus STOP command from keyboard.       |
 | SENDBYTE.BAS | In EPSON or DECtalk mode, send a control byte.|
 | ELIZA80.BAS  | Jeff Shrager's Eliza for Talker/80 EPSON Mode.|
 | BUSYTEST.BAS | INP(11) port busy signal read test.           |
@@ -850,12 +850,12 @@ The Gerbers and Firmware and all specs (BOM, ...) are all open source and in pri
 
 ## Acknowledgements
 
-Thanks to [Teodor Costachioiuo](https://electronza.com/about-me/) for
+Thanks to [Teodor Costachioiu](https://electronza.com/about-me/) for
 the [Talking Clock Tutorial with the Mikroelektronika Text to Speech
 Clock Board](https://electronza.com/wp-content/uploads/2017/09/talking_clock-1.zip);
 I have rewritten this (Arduino) code and ported it to WinAVR.
 
-Elliot Wiliams for his book "Make: AVR Programming" and [corresponding sources /AVR Programming Libraries.](https://github.com/hexagon5un/AVR-Programming).
+Elliot Williams for his book "Make: AVR Programming" and [corresponding sources /AVR Programming Libraries.](https://github.com/hexagon5un/AVR-Programming).
 
 Special thanks to member of the "Vintage Computer Forum" (especially to "Joe Zwerko"!) for providing crucial info, such as the phoneme tables for the Votrax SC-01 and the TRS Voice Synthesizer. 
 
