@@ -1,5 +1,7 @@
 # Talker/80
 
+#### Project Page: [www.michael-wessel.info/hardware.html](https://www.michael-wessel.info/hardware.html#talker-80)
+
 ## A Modern Voice Synthesizer for the TRS-80 Model 1, Model 3, and Model 4 
 ### New Dimensions in Voice Synthesis for the Iconic "Trinity" Computer from 1977 
 
