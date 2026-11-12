@@ -21,8 +21,9 @@ The new decoder,
 8-11 only in the native (Epson and DECtalk) mode; the VS-100 and TRS
 Voice Synthesizer modes are unchanged. Programmed on a T48 and tested on
 a Model 1 with X-MEM/80: CPC Lisp speaks and sings, VOICDEMO still runs.
-(MIDI/80's port 8 still falls in 8-11: A0 and A1 are not decoded.) The
-original decoder stays the one for a Model 1 without X-MEM/80.
+Why it is needed: [The Model 1 address decoder and
+X-MEM/80](#the-model-1-address-decoder-and-x-mem80). The original
+decoder stays the one for a Model 1 without X-MEM/80.
 
 - 7/05/2025: Talker/80 is going to be presented at VCF West 2025 in
 Mountain View! In preparation for the show, I tried various hardware
@@ -743,6 +744,43 @@ Have a look at the BASIC programs provided on the disk images (see below).
 * [GAL22V10 JEDEC Databus Buffer WinCupl Source](src/gal22v10/m1/Talker80-databus.PLD)
 * [ATmega 644 Firmware HEX File](src/atmega644/talker80-firmware.hex)
 * [ATmega 644 Firmware C Source](src/atmega644/talker.c)
+
+#### The Model 1 address decoder and X-MEM/80
+
+The Model 1 decoder decodes the I/O address only partly, on purpose: like
+the original VS-100, it answers whenever address bits 7, 5, 4 and 2 are 0
+-- ports 0-3, 8-11, 64-67 and 72-75 -- so that VS-100 software finds it
+where it expects it (A0 and A1 are not decoded at all; the GAL uses
+those pins for the status bits). The native modes, Epson and DECtalk,
+use the same decoding.
+
+That clashes with [X-MEM/80](https://github.com/lambdamikel/x-mem-80),
+the 512 KB paged memory for the TRS-80: it selects its 16 KB pages with
+`OUT 65` (the window at &8000) and `OUT 66` (the window at &C000), and
+both of those ports are in Talker/80's range. Every page switch then
+also reaches Talker/80, as a byte of text. A program that pages often
+fills Talker/80's 256-byte buffer with page numbers: its LEDs flicker
+with "bus activity", and what is meant to be spoken is lost or garbled.
+[CPC Lisp](https://github.com/lambdamikel/cpc-lisp-machine-os), which
+runs its code from X-MEM/80's pages and switches between them on almost
+every call -- thousands of times a second -- spoke once and then fell
+silent. Software cannot avoid it: the paging is the point of X-MEM/80.
+
+The [X-MEM/80 version of the decoder](src/gal22v10/m1/Talker80-decoder-xmem.jed)
+([source](src/gal22v10/m1/Talker80-decoder-xmem.PLD)) restricts the
+native modes to ports 8-11 (`0000 10xx`), clear of X-MEM/80's 64-67.
+The VS-100 and TRS Voice Synthesizer modes keep their decoding, so their
+software works as before, and Epson and DECtalk programs use port 11, as
+they always did. It was made from the original's fuses -- the NATIVE
+terms of SPEECH_WRITE and SPEECH_READ only -- checked by simulating both
+fuse maps over every mode, port and strobe, programmed on a T48 and read
+back, and tested on a Model 1 with X-MEM/80: CPC Lisp speaks and sings,
+and VOICDEMO still runs.
+
+One overlap remains: MIDI/80's port 8 is in 8-11, and without A0 and A1
+the two cannot be told apart, so MIDI bytes reach Talker/80 too while a
+program sends MIDI. Without X-MEM/80, the original decoder is the one to
+use. The Model 3 / 4 version decodes port 11 alone and needs no change.
 
 ### Model 3 / 4 Version
 
