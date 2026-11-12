@@ -9,6 +9,21 @@
 
 ## Latest News
 
+- 11/12/2026: **An address decoder for the Model 1 Talker/80 with
+[X-MEM/80](https://github.com/lambdamikel/x-mem-80).** To be as authentic
+as the VS-100, the Model 1 decoder GAL answers ports 0-3, 8-11, 64-67 and
+72-75 -- but X-MEM/80's page registers are ports 65 and 66, so a program
+that pages (such as [CPC Lisp](https://github.com/lambdamikel/cpc-lisp-machine-os),
+thousands of switches a second) fills Talker/80's buffer with page numbers.
+The new decoder,
+[`Talker80-decoder-xmem.jed`](src/gal22v10/m1/Talker80-decoder-xmem.jed)
+([source](src/gal22v10/m1/Talker80-decoder-xmem.PLD)), answers ports
+8-11 only in the native (Epson and DECtalk) mode; the VS-100 and TRS
+Voice Synthesizer modes are unchanged. Programmed on a T48 and tested on
+a Model 1 with X-MEM/80: CPC Lisp speaks and sings, VOICDEMO still runs.
+(MIDI/80's port 8 still falls in 8-11: A0 and A1 are not decoded.) The
+original decoder stays the one for a Model 1 without X-MEM/80.
+
 - 7/05/2025: Talker/80 is going to be presented at VCF West 2025 in
 Mountain View! In preparation for the show, I tried various hardware
 configurations and to my surprise, I got different `INP(11)` status
@@ -723,6 +738,7 @@ Have a look at the BASIC programs provided on the disk images (see below).
 
 * [GAL22V10 JEDEC Address Decoder JED File](src/gal22v10/m1/Talker80-decoder.jed)
 * [GAL22V10 JEDEC Address Decoder WinCupl Source](src/gal22v10/m1/Talker80-decoder.PLD)
+* With X-MEM/80: [GAL22V10 JEDEC Address Decoder JED File, X-MEM/80 version](src/gal22v10/m1/Talker80-decoder-xmem.jed) and its [source](src/gal22v10/m1/Talker80-decoder-xmem.PLD) -- native mode on ports 8-11 only, clear of X-MEM/80's 64-67 (see the news of 11/12/2026)
 * [GAL22V10 JEDEC Databus Buffer JED File](src/gal22v10/m1/Talker80-databus.jed)
 * [GAL22V10 JEDEC Databus Buffer WinCupl Source](src/gal22v10/m1/Talker80-databus.PLD)
 * [ATmega 644 Firmware HEX File](src/atmega644/talker80-firmware.hex)
